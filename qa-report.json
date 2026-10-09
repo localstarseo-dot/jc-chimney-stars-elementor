@@ -78,7 +78,7 @@
   "status_boundary": {
     "local_build": "complete",
     "local_responsive_qa": "passed",
-    "github_push": "not_performed_for_this_revision",
+    "github_push": "pushed_to_main",
     "github_pages": "not_configured",
     "elementor_migration": "not_started",
     "wordpress_form_and_crm_qa": "not_started",

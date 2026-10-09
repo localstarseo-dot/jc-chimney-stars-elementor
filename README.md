@@ -47,4 +47,4 @@ Desktop and mobile QA screenshots are stored in `qa/`. The machine-readable resu
 
 ## Status boundary
 
-The live-style homepage duplicate is built, committed, and QA-tested locally. It has not been pushed for this revision, recreated in Elementor, connected to WordPress forms or CRM delivery, instrumented for conversion tracking, published to the live site, or measured in production.
+The live-style homepage duplicate is built, committed, QA-tested locally, and pushed to the GitHub repository on `main`. It has not been recreated in Elementor, connected to WordPress forms or CRM delivery, instrumented for conversion tracking, published to the live site, or measured in production.

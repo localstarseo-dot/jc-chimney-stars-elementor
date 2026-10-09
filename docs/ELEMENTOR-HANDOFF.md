@@ -68,7 +68,7 @@ The duplicate reflects values currently displayed on the live homepage. Before p
 | --- | --- |
 | Local duplicate | Built |
 | Local responsive and interaction QA | Passed |
-| Current revision pushed to GitHub | Not performed |
+| Current revision pushed to GitHub | Pushed to main |
 | Elementor recreation | Not started |
 | WordPress form/CRM delivery | Not connected |
 | Tracking and schema QA | Not started |
