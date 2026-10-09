@@ -1,0 +1,316 @@
+:root {
+  --cs-navy: #081a4a;
+  --cs-navy-deep: #041235;
+  --cs-navy-soft: #102a68;
+  --cs-red: #c91f26;
+  --cs-red-dark: #a9151b;
+  --cs-warm-white: #f6f3ee;
+  --cs-charcoal: #252a34;
+  --cs-gold: #d69c2f;
+  --cs-white: #fff;
+  --cs-muted: #687286;
+  --cs-line: #dce1e8;
+  --cs-container: 1200px;
+  --cs-radius-sm: 8px;
+  --cs-radius-md: 16px;
+  --cs-radius-lg: 24px;
+  --cs-shadow-sm: 0 8px 24px rgba(4, 18, 53, 0.08);
+  --cs-shadow-md: 0 18px 48px rgba(4, 18, 53, 0.14);
+  --cs-space-xs: 0.5rem;
+  --cs-space-sm: 1rem;
+  --cs-space-md: 1.5rem;
+  --cs-space-lg: 2.5rem;
+  --cs-space-xl: 4rem;
+  --cs-space-2xl: 6rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--cs-charcoal);
+  background: var(--cs-white);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.cs-menu-open {
+  overflow: hidden;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+p,
+ul,
+ol,
+figure,
+blockquote {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.8rem;
+  color: var(--cs-navy);
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 5.7vw, 5.45rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 3.65rem);
+}
+
+h3 {
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cs-gold);
+  outline-offset: 4px;
+}
+
+.cs-container {
+  width: min(calc(100% - 3rem), var(--cs-container));
+  margin-inline: auto;
+}
+
+.cs-section {
+  position: relative;
+  padding-block: var(--cs-space-2xl);
+  overflow: hidden;
+}
+
+.cs-section--light {
+  background: var(--cs-white);
+}
+
+.cs-section--warm {
+  background: var(--cs-warm-white);
+}
+
+.cs-section--navy,
+.cs-section--blueprint {
+  color: rgba(255, 255, 255, 0.84);
+  background-color: var(--cs-navy);
+}
+
+.cs-section--navy h2,
+.cs-section--navy h3,
+.cs-section--blueprint h1,
+.cs-section--blueprint h2,
+.cs-section--blueprint h3 {
+  color: var(--cs-white);
+}
+
+.cs-section--blueprint {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(145deg, var(--cs-navy) 0%, var(--cs-navy-deep) 76%);
+  background-size: 28px 28px, 28px 28px, auto;
+}
+
+.cs-button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.78rem 1.25rem;
+  border: 2px solid transparent;
+  border-radius: var(--cs-radius-sm);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.cs-button:hover {
+  transform: translateY(-2px);
+}
+
+.cs-button--primary {
+  color: var(--cs-white);
+  background: var(--cs-red);
+  border-color: var(--cs-red);
+  box-shadow: 0 10px 24px rgba(201, 31, 38, 0.2);
+}
+
+.cs-button--primary:hover {
+  background: var(--cs-red-dark);
+  border-color: var(--cs-red-dark);
+}
+
+.cs-button--secondary {
+  color: var(--cs-navy);
+  border-color: var(--cs-navy);
+  background: transparent;
+}
+
+.cs-button--secondary:hover {
+  color: var(--cs-white);
+  background: var(--cs-navy);
+}
+
+.cs-button--light {
+  color: var(--cs-white);
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cs-button--light:hover {
+  color: var(--cs-navy);
+  background: var(--cs-white);
+  border-color: var(--cs-white);
+}
+
+.cs-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.1rem;
+  color: var(--cs-red);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.cs-eyebrow > span {
+  width: 36px;
+  height: 2px;
+  background: currentColor;
+}
+
+.cs-eyebrow--light {
+  color: var(--cs-gold);
+}
+
+.cs-section-heading {
+  margin-bottom: 2.75rem;
+}
+
+.cs-section-heading h2 {
+  max-width: 760px;
+}
+
+.cs-section-heading p {
+  max-width: 620px;
+  margin-bottom: 0;
+  color: var(--cs-muted);
+}
+
+.cs-section-heading--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  align-items: end;
+  gap: 3rem;
+}
+
+.cs-section-heading--center {
+  display: flex;
+  max-width: 760px;
+  margin-inline: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cs-section-heading--center p {
+  margin-inline: auto;
+}
+
+.cs-section-heading--light p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.cs-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--cs-navy);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cs-text-link:hover {
+  color: var(--cs-red);
+}
+
+.cs-skip-link {
+  position: fixed;
+  z-index: 9999;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  color: var(--cs-white);
+  background: var(--cs-navy);
+  border-radius: var(--cs-radius-sm);
+  transform: translateY(-160%);
+}
+
+.cs-skip-link:focus {
+  transform: translateY(0);
+}
+
+.cs-mobile-actions {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

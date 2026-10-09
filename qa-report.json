@@ -1,85 +1,62 @@
 {
-  "checked_on": "2026-09-22T22:45:28.180Z",
-  "local_assets_verified": 43,
+  "checked_at": "2026-10-10",
+  "status": "passed",
+  "scope": "Local static homepage mock",
   "viewports": [
     {
-      "width": 320,
-      "passed": true,
-      "h1": 1,
-      "images": 40,
-      "brokenImages": 0,
-      "duplicateIds": [],
-      "horizontalOverflow": false,
-      "escapedRoutes": 0,
-      "runtimeErrors": [],
-      "localFailures": [],
-      "externalFailures": [
-        "https://www.google.com/maps?q=Austin%2C%20TX&z=9&output=embed net::ERR_ABORTED"
-      ]
-    },
-    {
       "width": 390,
-      "passed": true,
-      "h1": 1,
-      "images": 40,
-      "brokenImages": 0,
-      "duplicateIds": [],
-      "horizontalOverflow": false,
-      "escapedRoutes": 0,
-      "runtimeErrors": [],
-      "localFailures": [],
-      "externalFailures": [
-        "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sAustin,+TX!6i9 net::ERR_ABORTED"
-      ]
+      "height": 844,
+      "page_height": 13236,
+      "passed": true
     },
     {
       "width": 768,
-      "passed": true,
-      "h1": 1,
-      "images": 40,
-      "brokenImages": 0,
-      "duplicateIds": [],
-      "horizontalOverflow": false,
-      "escapedRoutes": 0,
-      "runtimeErrors": [],
-      "localFailures": [],
-      "externalFailures": [
-        "https://www.google.com/maps?q=Austin%2C%20TX&z=9&output=embed net::ERR_ABORTED"
-      ]
+      "height": 900,
+      "page_height": 8661,
+      "passed": true
     },
     {
       "width": 1024,
-      "passed": true,
-      "h1": 1,
-      "images": 40,
-      "brokenImages": 0,
-      "duplicateIds": [],
-      "horizontalOverflow": false,
-      "escapedRoutes": 0,
-      "runtimeErrors": [],
-      "localFailures": [],
-      "externalFailures": [
-        "https://www.google.com/maps?q=Austin%2C%20TX&z=9&output=embed net::ERR_ABORTED"
-      ]
+      "height": 900,
+      "page_height": 7704,
+      "passed": true
     },
     {
       "width": 1440,
-      "passed": true,
-      "h1": 1,
-      "images": 40,
-      "brokenImages": 0,
-      "duplicateIds": [],
-      "horizontalOverflow": false,
-      "escapedRoutes": 0,
-      "runtimeErrors": [],
-      "localFailures": [],
-      "externalFailures": []
+      "height": 900,
+      "page_height": 7416,
+      "passed": true
     }
   ],
-  "publication": "Not published to GitHub",
-  "direct_file_preview": {
-    "images": true,
+  "checks": {
+    "single_h1": true,
+    "horizontal_overflow": false,
+    "duplicate_ids": false,
+    "all_images_loaded": true,
+    "image_alt_attributes": true,
+    "image_intrinsic_dimensions": true,
     "mobile_menu": true,
-    "note": "HTTP serving is recommended for CSS mask compatibility."
+    "escape_closes_menu": true,
+    "menu_focus_restored": true,
+    "faq_interaction": true,
+    "browser_console_errors": 0,
+    "failed_page_resources": 0,
+    "verified_external_urls": 21,
+    "broken_verified_external_urls": 0
+  },
+  "structure": {
+    "sections": 10,
+    "dom_elements": 400,
+    "images": 36
+  },
+  "status_boundary": {
+    "local_build": "complete",
+    "local_responsive_qa": "passed",
+    "github_push": "not_yet_performed",
+    "github_pages": "not_configured",
+    "elementor_migration": "not_started",
+    "wordpress_integration_qa": "not_started",
+    "tracking": "not_implemented",
+    "production_measurement": "not_started"
   }
 }
