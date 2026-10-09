@@ -21,7 +21,7 @@ This local homepage is the source-of-truth duplicate for design review. It is no
 | --- | --- | --- | --- |
 | Header | Theme Builder header with inner horizontal Container | Image, Nav Menu, Button | Desktop nav; Elementor drawer/mobile menu at 1024px |
 | Review bar | Full-width Container below nav | Text and star icon row | Wraps into two lines on narrow screens |
-| Hero | Full-width Container with background image and overlay | Heading, Text, Icon List, Button | Left-aligned content; background repositions on mobile |
+| Hero | Full-width Container with five local background photos and a fixed overlay | Background slideshow, Heading, Text, Icon List, Button | 3000ms rotation, 900ms fade; background repositions on mobile |
 | Help selector | Narrow inner Container | Form Select and Button | Single column at all sizes |
 | Stats | Four equal child Containers | Icon, Counter, Heading | Four/two/one columns |
 | Service cards | Eight repeated child Containers | Icon Box | Four/two/one columns |
@@ -35,6 +35,10 @@ This local homepage is the source-of-truth duplicate for design review. It is no
 | Service areas | Centered heading and three-column Icon List | Heading, Icon List | Three/two/one columns |
 | Contact | Two-column Container | Elementor Form, Text, Icon List, Button | Stacked mobile |
 | Footer | Theme Builder footer | Image, Text, Icon Lists | Four/two/one columns |
+
+## Hero slideshow
+
+The hero cycles through rooftop repair, fireplace service, inspection consultation, crown repair, and the team photo. Reproduce that sequence in the Elementor background slideshow with a 3000ms interval and a 900ms fade. Keep the dark overlay and copy fixed. The local slideshow decodes the next photo before display, includes a pause/play control, pauses offscreen or in a hidden tab, and starts paused when reduced motion is requested.
 
 ## Form implementation boundary
 

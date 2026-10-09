@@ -50,6 +50,8 @@
     "service_selector_preview": true,
     "faq_interaction": true,
     "contact_form_non_sending_preview": true,
+    "hero_slideshow_rotation": true,
+    "hero_slideshow_pause_resume": true,
     "browser_console_errors": 0,
     "verified_external_anchor_urls": 15,
     "broken_verified_external_anchor_urls": 0
@@ -57,12 +59,21 @@
   "live_duplicate": {
     "source": "Supplied screenshots plus current live homepage verification",
     "sections": 12,
-    "images": 21,
+    "images": 25,
     "faq_items": 12,
     "service_areas": 29,
     "elementor_container_px": 1140,
     "tablet_max_px": 1024,
     "mobile_max_px": 767
+  },
+  "hero_slideshow": {
+    "photos": 5,
+    "interval_ms": 3000,
+    "fade_ms": 900,
+    "all_hero_photos_loaded": true,
+    "pause_resume_verified": true,
+    "reduced_motion": "starts_paused",
+    "screenshot": "qa/hero-slideshow.jpg"
   },
   "status_boundary": {
     "local_build": "complete",
