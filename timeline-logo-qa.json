@@ -1,0 +1,25 @@
+{
+  "checked_on": "2026-09-28",
+  "scope": "Official star logo replacement for the moving scroll-timeline marker",
+  "status": "locally verified; not published",
+  "asset": "assets/brand/logo1.webp",
+  "badge_background": "rgb(246, 243, 238)",
+  "desktop": {
+    "viewport_width": 1440,
+    "badge_width": 56,
+    "logo_loaded": true,
+    "horizontal_overflow": false,
+    "scroll_progress_before": 0.5964,
+    "scroll_progress_after": 0.7439
+  },
+  "mobile": {
+    "viewport_width": 390,
+    "badge_width": 52,
+    "logo_width": 44,
+    "logo_loaded": true,
+    "horizontal_overflow": false,
+    "badge_right": 71,
+    "card_left": 82
+  },
+  "notes": "Existing timeline JavaScript and reduced-motion rules are unchanged. The earlier full-page checks remain recorded separately in qa-report.json."
+}
