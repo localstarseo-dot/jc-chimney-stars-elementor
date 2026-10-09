@@ -18,13 +18,25 @@
     {
       "width": 1024,
       "height": 900,
-      "page_height": 7704,
+      "page_height": 8783,
+      "passed": true
+    },
+    {
+      "width": 1025,
+      "height": 900,
+      "page_height": 7060,
+      "passed": true
+    },
+    {
+      "width": 1199,
+      "height": 900,
+      "page_height": 7098,
       "passed": true
     },
     {
       "width": 1440,
       "height": 900,
-      "page_height": 7416,
+      "page_height": 7426,
       "passed": true
     }
   ],
@@ -43,6 +55,26 @@
     "failed_page_resources": 0,
     "verified_external_urls": 21,
     "broken_verified_external_urls": 0
+  },
+  "live_elementor_compatibility": {
+    "theme_family": "Hello Elementor child theme",
+    "content_container_px": 1140,
+    "tablet_max_px": 1024,
+    "mobile_max_px": 767,
+    "theme_builder_areas": [
+      "header",
+      "content",
+      "pre-footer-cta",
+      "footer"
+    ],
+    "palette": {
+      "primary_red": "#A90100",
+      "dark_navy": "#1C1E3D",
+      "warm_white": "#F8F3EF",
+      "muted_gold": "#A99767",
+      "body_text": "#333333",
+      "page_background": "#FBFBFB"
+    }
   },
   "structure": {
     "sections": 10,

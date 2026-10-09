@@ -1,16 +1,17 @@
 :root {
-  --cs-navy: #081a4a;
-  --cs-navy-deep: #041235;
-  --cs-navy-soft: #102a68;
-  --cs-red: #c91f26;
-  --cs-red-dark: #a9151b;
-  --cs-warm-white: #f6f3ee;
-  --cs-charcoal: #252a34;
-  --cs-gold: #d69c2f;
+  /* Matched to the active Elementor site's computed brand palette. */
+  --cs-navy: #1c1e3d;
+  --cs-navy-deep: #101124;
+  --cs-navy-soft: #2a2d58;
+  --cs-red: #a90100;
+  --cs-red-dark: #850100;
+  --cs-warm-white: #f8f3ef;
+  --cs-charcoal: #333333;
+  --cs-gold: #a99767;
   --cs-white: #fff;
   --cs-muted: #687286;
   --cs-line: #dce1e8;
-  --cs-container: 1200px;
+  --cs-container: 1140px;
   --cs-radius-sm: 8px;
   --cs-radius-md: 16px;
   --cs-radius-lg: 24px;
@@ -37,7 +38,7 @@ html {
 body {
   margin: 0;
   color: var(--cs-charcoal);
-  background: var(--cs-white);
+  background: #fbfbfb;
   font-family: "Inter", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.65;
@@ -155,7 +156,7 @@ textarea {
   gap: 0.55rem;
   padding: 0.78rem 1.25rem;
   border: 2px solid transparent;
-  border-radius: var(--cs-radius-sm);
+  border-radius: 15px;
   font-family: "Inter", Arial, sans-serif;
   font-size: 0.84rem;
   font-weight: 700;

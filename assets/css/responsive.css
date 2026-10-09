@@ -1,37 +1,4 @@
-@media (max-width: 1199px) {
-  .cs-header__inner {
-    gap: 1.2rem;
-  }
-
-  .cs-brand,
-  .cs-brand img {
-    width: 165px;
-    flex-basis: 165px;
-  }
-
-  .cs-navigation__list {
-    gap: 0.85rem;
-  }
-
-  .cs-navigation__list > li > a {
-    font-size: 0.7rem;
-  }
-
-  .cs-navigation__list > li:nth-last-child(2),
-  .cs-navigation__list > li:nth-last-child(3) {
-    display: none;
-  }
-
-  .cs-service-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .cs-service-card--action {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   :root {
     --cs-space-2xl: 4.5rem;
   }
@@ -121,9 +88,7 @@
     gap: 0;
   }
 
-  .cs-navigation__list > li,
-  .cs-navigation__list > li:nth-last-child(2),
-  .cs-navigation__list > li:nth-last-child(3) {
+  .cs-navigation__list > li {
     display: block;
     border-bottom: 1px solid var(--cs-line);
   }

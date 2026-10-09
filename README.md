@@ -10,6 +10,7 @@ The mock uses:
 
 - approved local Chimney Star logos, trust marks, icons, team photography, and project images;
 - separate global, component, and responsive stylesheets;
+- the active live Elementor palette, 1140px content area, and 1024px/767px breakpoints;
 - minimal JavaScript for the accessible mobile navigation;
 - verified existing service and location URLs;
 - concise Elementor build comments plus a separate handoff map;

@@ -23,7 +23,7 @@
   };
 
   const syncNavigation = () => {
-    if (window.matchMedia('(max-width: 1023px)').matches) {
+    if (window.matchMedia('(max-width: 1024px)').matches) {
       closeMenu();
     } else {
       toggle.setAttribute('aria-expanded', 'false');
@@ -39,7 +39,7 @@
   });
 
   navigation.addEventListener('click', (event) => {
-    if (event.target.closest('a') && window.matchMedia('(max-width: 1023px)').matches) {
+    if (event.target.closest('a') && window.matchMedia('(max-width: 1024px)').matches) {
       closeMenu();
     }
   });

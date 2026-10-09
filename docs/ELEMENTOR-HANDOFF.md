@@ -4,12 +4,16 @@ This local homepage is a static design-review source. It is not yet an Elementor
 
 ## Global system
 
+- Compatibility baseline verified from the live site: Hello Elementor child theme, Elementor and Elementor Pro, a 1140px content container, tablet through 1024px, and mobile through 767px.
+- Match the live Elementor palette: primary red `#A90100`, dark navy `#1C1E3D`, warm white `#F8F3EF`, muted gold `#A99767`, body text `#333333`, and page background `#FBFBFB`.
 - Set the global colors from `assets/css/global.css` in Elementor Site Settings.
 - Use Manrope for headings and Inter for body/UI text.
 - Use Theme Builder templates for the header, footer, and pre-footer CTA.
 - Assign the existing `.cs-*` classes through each Container or widget's Advanced settings.
 - Keep one global CSS layer. Do not paste the full stylesheet into individual HTML widgets.
 - Use native Elementor widgets for headings, text, images, buttons, icon lists, accordions, and navigation.
+- Keep the four Theme Builder areas identified in the mock: `header`, `content`, `pre-footer-cta`, and `footer`.
+- Keep the primary desktop navigation aligned to the live Elementor header areas: About Us, Roofing Services, Chimney Services, Fireplace Services, and Duct Services, followed by the booking CTA. Secondary destinations remain in the footer or relevant page sections.
 
 ## Section map
 
