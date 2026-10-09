@@ -53,3 +53,39 @@
   window.addEventListener('resize', syncNavigation);
   syncNavigation();
 })();
+
+(() => {
+  const serviceForm = document.querySelector('[data-cs-service-form]');
+  const serviceStatus = document.querySelector('[data-cs-service-status]');
+
+  if (serviceForm && serviceStatus) {
+    serviceForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const select = serviceForm.querySelector('select');
+
+      if (!select.value) {
+        serviceStatus.textContent = 'Choose a service to continue the local design preview.';
+        select.focus();
+        return;
+      }
+
+      serviceStatus.innerHTML = `Selected: <strong>${select.value}</strong>. The production Elementor form will continue to customer details and booking.`;
+    });
+  }
+
+  const previewForm = document.querySelector('[data-cs-preview-form]');
+  const previewStatus = document.querySelector('[data-cs-form-status]');
+
+  if (previewForm && previewStatus) {
+    previewForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!previewForm.checkValidity()) {
+        previewForm.reportValidity();
+        return;
+      }
+
+      previewStatus.textContent = 'Preview confirmed. No message was sent; connect the approved Elementor form, reCAPTCHA, and CRM during WordPress migration.';
+    });
+  }
+})();

@@ -1,93 +1,76 @@
 {
   "checked_at": "2026-10-10",
   "status": "passed",
-  "scope": "Local static homepage mock",
+  "scope": "Local live-site homepage duplicate",
   "viewports": [
     {
       "width": 390,
       "height": 844,
-      "page_height": 13236,
+      "page_height": 16502,
       "passed": true
     },
     {
       "width": 768,
       "height": 900,
-      "page_height": 8661,
+      "page_height": 10475,
       "passed": true
     },
     {
       "width": 1024,
       "height": 900,
-      "page_height": 8783,
+      "page_height": 10105,
       "passed": true
     },
     {
       "width": 1025,
       "height": 900,
-      "page_height": 7060,
+      "page_height": 8140,
       "passed": true
     },
     {
       "width": 1199,
       "height": 900,
-      "page_height": 7098,
+      "page_height": 8079,
       "passed": true
     },
     {
       "width": 1440,
       "height": 900,
-      "page_height": 7426,
+      "page_height": 8255,
       "passed": true
     }
   ],
   "checks": {
     "single_h1": true,
     "horizontal_overflow": false,
-    "duplicate_ids": false,
     "all_images_loaded": true,
     "image_alt_attributes": true,
     "image_intrinsic_dimensions": true,
-    "mobile_menu": true,
-    "escape_closes_menu": true,
-    "menu_focus_restored": true,
+    "mobile_menu_open_close": true,
+    "service_selector_preview": true,
     "faq_interaction": true,
+    "contact_form_non_sending_preview": true,
     "browser_console_errors": 0,
-    "failed_page_resources": 0,
-    "verified_external_urls": 21,
-    "broken_verified_external_urls": 0
+    "verified_external_anchor_urls": 15,
+    "broken_verified_external_anchor_urls": 0
   },
-  "live_elementor_compatibility": {
-    "theme_family": "Hello Elementor child theme",
-    "content_container_px": 1140,
+  "live_duplicate": {
+    "source": "Supplied screenshots plus current live homepage verification",
+    "sections": 12,
+    "images": 21,
+    "faq_items": 12,
+    "service_areas": 29,
+    "elementor_container_px": 1140,
     "tablet_max_px": 1024,
-    "mobile_max_px": 767,
-    "theme_builder_areas": [
-      "header",
-      "content",
-      "pre-footer-cta",
-      "footer"
-    ],
-    "palette": {
-      "primary_red": "#A90100",
-      "dark_navy": "#1C1E3D",
-      "warm_white": "#F8F3EF",
-      "muted_gold": "#A99767",
-      "body_text": "#333333",
-      "page_background": "#FBFBFB"
-    }
-  },
-  "structure": {
-    "sections": 10,
-    "dom_elements": 400,
-    "images": 36
+    "mobile_max_px": 767
   },
   "status_boundary": {
     "local_build": "complete",
     "local_responsive_qa": "passed",
-    "github_push": "not_yet_performed",
+    "github_push": "not_performed_for_this_revision",
     "github_pages": "not_configured",
     "elementor_migration": "not_started",
-    "wordpress_integration_qa": "not_started",
+    "wordpress_form_and_crm_qa": "not_started",
     "tracking": "not_implemented",
     "production_measurement": "not_started"
   }

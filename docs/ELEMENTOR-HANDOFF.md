@@ -1,45 +1,71 @@
 # Elementor handoff map
 
-This local homepage is a static design-review source. It is not yet an Elementor template or a live WordPress implementation.
+This local homepage is the source-of-truth duplicate for design review. It is not yet an Elementor template or a live WordPress implementation.
 
 ## Global system
 
-- Compatibility baseline verified from the live site: Hello Elementor child theme, Elementor and Elementor Pro, a 1140px content container, tablet through 1024px, and mobile through 767px.
-- Match the live Elementor palette: primary red `#A90100`, dark navy `#1C1E3D`, warm white `#F8F3EF`, muted gold `#A99767`, body text `#333333`, and page background `#FBFBFB`.
-- Set the global colors from `assets/css/global.css` in Elementor Site Settings.
-- Use Manrope for headings and Inter for body/UI text.
-- Use Theme Builder templates for the header, footer, and pre-footer CTA.
-- Assign the existing `.cs-*` classes through each Container or widget's Advanced settings.
-- Keep one global CSS layer. Do not paste the full stylesheet into individual HTML widgets.
-- Use native Elementor widgets for headings, text, images, buttons, icon lists, accordions, and navigation.
-- Keep the four Theme Builder areas identified in the mock: `header`, `content`, `pre-footer-cta`, and `footer`.
-- Keep the primary desktop navigation aligned to the live Elementor header areas: About Us, Roofing Services, Chimney Services, Fireplace Services, and Duct Services, followed by the booking CTA. Secondary destinations remain in the footer or relevant page sections.
+- Baseline: Hello Elementor child theme, Elementor and Elementor Pro.
+- Content width: `1140px`.
+- Tablet breakpoint: through `1024px`.
+- Mobile breakpoint: through `767px`.
+- Core colors: primary red `#A90100`, bright CTA red `#C40000`, dark navy `#1C1E3D`, warm white `#F8F3EF`, black `#050505`, muted gold `#A99767`.
+- Typography: Poppins for primary UI and headings; Bangers only for the live-style action/contact display headings.
+- Theme Builder owns the header and footer. The page template owns the content sections.
+- Add the existing `.cs-*` classes through each Container or widget’s Advanced settings.
+- Keep one shared CSS layer. Do not paste the entire stylesheet into multiple HTML widgets.
+- Use native Elementor widgets for headings, text, images, buttons, icon lists, Forms, Accordions, and Nav Menu.
 
-## Section map
+## Duplicate section map
 
-| Mock section | Elementor structure | Widgets | Responsive behavior | Custom code |
-| --- | --- | --- | --- | --- |
-| Utility and header | Theme Builder header with two parent Containers | Image, Nav Menu, Buttons, Text | Desktop horizontal; mobile drawer | Small mobile-menu script only if Elementor Nav Menu does not cover the approved behavior |
-| Hero | Parent Container, two inner Containers | Heading, Text, Buttons, Icon List, Image | 55/45 desktop; stacked mobile | Blueprint grid and image-frame CSS |
-| Help panel | Inner Container with four child Containers | Heading, Icon Box or CTA | Four/two/one columns | None |
-| Trust strip | Full-width Container | Images and Text | Horizontal, wrapping on mobile | None |
-| Services | Loop Grid or repeated card Containers | Image, Icon, Heading, Text, Button | Four/two/one columns | Card classes only |
-| Knowledge | Two-column Container | Image, Heading, Text, Icon List | Two columns, then stack | Blueprint background only |
-| Process | Repeated child Containers | Icon Box | Four/two/one columns | Dashed connector is optional CSS |
-| Projects | Loop Grid | Featured Image, taxonomy/text | Asymmetric desktop, stacked mobile | Grid classes only |
-| Reviews | Loop Grid or Loop Carousel | Rating, Text, Name | Three/one columns | Use verified review data only |
-| FAQ | Two-column Container with Nested Accordion | Heading, Text, Accordion | Two columns, then stack | None |
-| Service areas | Parent Container plus location Loop Grid | Heading, Text, Loop Grid, CTA | Two columns, then stack | None |
-| CTA and footer | Theme Builder template parts | Heading, Buttons, Images, Lists | Horizontal to stacked | Roofline decoration only |
+| Live duplicate section | Elementor structure | Primary widgets | Responsive behavior |
+| --- | --- | --- | --- |
+| Header | Theme Builder header with inner horizontal Container | Image, Nav Menu, Button | Desktop nav; Elementor drawer/mobile menu at 1024px |
+| Review bar | Full-width Container below nav | Text and star icon row | Wraps into two lines on narrow screens |
+| Hero | Full-width Container with background image and overlay | Heading, Text, Icon List, Button | Left-aligned content; background repositions on mobile |
+| Help selector | Narrow inner Container | Form Select and Button | Single column at all sizes |
+| Stats | Four equal child Containers | Icon, Counter, Heading | Four/two/one columns |
+| Service cards | Eight repeated child Containers | Icon Box | Four/two/one columns |
+| Reviews | Summary Container plus three cards | Rating, Text, Heading | Four-part desktop layout; stacked mobile |
+| Team gallery | Four image Containers | Image | Four/two/one columns |
+| Service process | Four repeated child Containers | Icon Box | Four/two/one columns |
+| Cleaning feature | Two-column Container | Image, Heading, Text, Button | Stacks image before copy |
+| Inspection feature | Two-column dark Container | Heading, Text, Button, Image | Stacks image before copy |
+| Service inventories | Two headings plus Icon List grids | Heading, Icon List | Three/four columns; one column mobile |
+| FAQs | Nested Accordion in two columns | Accordion | Two columns desktop; one column mobile |
+| Service areas | Centered heading and three-column Icon List | Heading, Icon List | Three/two/one columns |
+| Contact | Two-column Container | Elementor Form, Text, Icon List, Button | Stacked mobile |
+| Footer | Theme Builder footer | Image, Text, Icon Lists | Four/two/one columns |
 
-## WordPress dependencies to confirm
+## Form implementation boundary
 
-- Whether booking stays on the current `/book-online/` page or uses a Workiz embed.
-- Whether review cards are maintained manually, through a plugin, or through a verified review data source.
-- Whether services and locations will use Posts, Pages, or custom post types for Loop Grid templates.
-- Final global header/footer approval before building Theme Builder templates.
-- Current credentials, offer terms, review totals, business hours, addresses, and service coverage before publication.
+The local service selector and contact form intentionally do not transmit data. During WordPress migration:
+
+1. Rebuild both with the approved Elementor Form or Workiz workflow.
+2. Confirm recipients, CRM routing, required fields, consent text, reCAPTCHA, success/error states, and spam handling.
+3. Test delivery end-to-end with a controlled submission.
+4. Add conversion tracking only after the real success event is known.
+
+## Content requiring client confirmation
+
+The duplicate reflects values currently displayed on the live homepage. Before publication, confirm:
+
+- 19+ years language;
+- 619+ review total and review-source presentation;
+- 831 inspections, 3,894 fires prevented, 1,478 sweeps, and 874 repairs;
+- certification, insurance, guarantee, and annual-service wording;
+- offer terms;
+- business hours;
+- Pflugerville and Central Austin addresses;
+- complete service-area coverage.
 
 ## Release boundary
 
-The local mock is built and responsive. Elementor recreation, WordPress forms, CRM delivery, tracking, schema ownership, live PageSpeed, and production QA remain separate stages.
+| Stage | Status |
+| --- | --- |
+| Local duplicate | Built |
+| Local responsive and interaction QA | Passed |
+| Current revision pushed to GitHub | Not performed |
+| Elementor recreation | Not started |
+| WordPress form/CRM delivery | Not connected |
+| Tracking and schema QA | Not started |
+| Live publication and production measurement | Not started |
