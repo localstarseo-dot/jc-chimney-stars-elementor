@@ -1,6 +1,6 @@
 # jc-chimney-stars-elementor
 
-Local source and design-review workspace for the Elementor-compatible Chimney Star homepage duplicate.
+Local source and design-review workspace for the Elementor-compatible Chimney Star website.
 
 ## Current deliverable
 
@@ -33,6 +33,16 @@ The duplicate uses:
 12. Contact preview and complete business footer
 
 ## Preview and validation
+
+## Additional pages
+
+- About Us: about-us.html
+- Service overviews: roofing-services.html, chimney-services.html, fireplace-services.html, duct-services.html
+- Individual services: chimney-sweep.html, chimney-inspection.html, chimney-repair.html, gas-fireplace-repair.html, firebox-masonry-repair.html, fireplace-cleaning.html, air-duct-cleaning.html, dryer-vent-services.html, air-duct-inspection.html
+
+All pages share the navigation, offer bar, lead forms, popup, and footer. Individual service heroes use one designated local image with no fading and compact height targets. Overview heroes keep their existing slideshow behavior. See docs/INDIVIDUAL-SERVICES.md for photo mappings and docs/SERVICE-PAGES.md for the service-template handoff.
+
+To validate a specific page, run node scripts/validate.mjs PAGE.html.
 
 The static site has no build step.
 

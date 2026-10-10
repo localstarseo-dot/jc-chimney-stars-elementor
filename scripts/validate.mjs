@@ -3,7 +3,7 @@ import path from 'node:path';
 import process from 'node:process';
 
 const root = process.cwd();
-const htmlPath = path.join(root, 'index.html');
+const htmlPath = path.join(root, process.argv[2] || 'index.html');
 const html = fs.readFileSync(htmlPath, 'utf8');
 const errors = [];
 

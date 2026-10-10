@@ -1075,3 +1075,21 @@ html.cs-lead-modal-open .cs-float-actions { visibility: hidden; }
   .cs-float-actions__button { min-height: 58px; padding-inline: 0.5rem; gap: 0.45rem; font-size: 0.82rem; }
   .cs-float-actions__button svg { width: 18px; height: 18px; flex-basis: 18px; }
 }
+.cs-home-sweeping .cs-feature__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(1.5rem, 4vw, 3rem); }
+.cs-home-sweeping .cs-feature__media { width: 100%; align-self: center; aspect-ratio: 1.12; border-radius: 12px; }
+.cs-home-sweeping .cs-feature__media img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+@media (max-width: 767px) {
+  .cs-home-sweeping .cs-feature__grid { grid-template-columns: 1fr; }
+  .cs-home-sweeping .cs-feature__media img { height: auto; aspect-ratio: 4 / 3; }
+}
+.cs-home-inspection .cs-feature__grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+.cs-home-inspection .cs-feature__media { width: 100%; align-self: center; aspect-ratio: 1.12; border-radius: 12px; }
+.cs-home-inspection .cs-feature__media img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+@media (max-width: 767px) {
+  .cs-home-inspection .cs-feature__grid { grid-template-columns: 1fr; }
+  .cs-home-inspection .cs-feature__media img { height: 100%; }
+}
+@media (max-width: 767px) {
+  .cs-home-sweeping .cs-feature__media, .cs-home-inspection .cs-feature__media { aspect-ratio: 4 / 3; }
+  .cs-home-sweeping .cs-feature__media img { height: 100%; }
+}

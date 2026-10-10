@@ -1,0 +1,30 @@
+/* Individual services: compact static hero. Overview-page heroes are unchanged. */
+.cs-detail-page .cs-action-gallery__track { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); transform: none; }
+.cs-detail-page .cs-action-gallery__track figure { width: 100%; }
+.cs-detail-page .cs-live-hero,
+.cs-detail-page .cs-live-hero__inner { min-height: calc(49svh - 58px); }
+.cs-detail-page .cs-live-hero__background { opacity: 1; transition: none; animation: none; }
+.cs-detail-page .cs-live-hero__inner { padding-block: 1.5rem; }
+.cs-detail-page .cs-live-hero__content { width: min(680px, 62%); }
+.cs-detail-page .cs-live-hero h1 { font-size: clamp(2rem, 3vw, 2.8rem); line-height: 1.12; margin-bottom: .7rem; }
+.cs-detail-page .cs-live-hero__content > p { font-size: 1rem; margin-bottom: .7rem; }
+.cs-detail-page .cs-hero-checks { gap: .2rem; margin-bottom: .7rem; font-size: .9rem; }
+.cs-detail-page .cs-hero-rating { margin-bottom: .7rem; }
+.cs-detail-page .cs-hero-trust { margin-bottom: .7rem; gap: 1rem; }
+.cs-detail-page .cs-hero-trust__credentials img { height: 40px; width: 40px; }
+.cs-detail-page .cs-hero-trust__reviews img { height: 40px; }
+.cs-detail-page .cs-hero-payments { margin-bottom: .85rem; }
+.cs-detail-page .cs-hero-payments__cards img { width: 58px; height: 36px; }
+.cs-detail-page .cs-hero-actions .cs-button { min-height: 48px; }
+@media (max-width: 1024px) {
+  .cs-detail-page .cs-live-hero, .cs-detail-page .cs-live-hero__inner { min-height: 382px; }
+  .cs-detail-page .cs-live-hero__content { width: 80%; }
+}
+@media (max-width: 767px) {
+  .cs-detail-page .cs-live-hero, .cs-detail-page .cs-live-hero__inner { min-height: 353px; }
+  .cs-detail-page .cs-live-hero__inner { padding-block: 1.25rem; }
+  .cs-detail-page .cs-live-hero__content { width: 100%; }
+  .cs-detail-page .cs-live-hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+  .cs-detail-page .cs-live-hero__content > p { font-size: .95rem; }
+  .cs-detail-page .cs-hero-trust { row-gap: .5rem; }
+}

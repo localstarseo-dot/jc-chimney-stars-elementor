@@ -185,6 +185,8 @@
 }
 
 @media (max-width: 767px) {
+  .cs-hero-payments { text-align: center; }
+  .cs-hero-payments__cards { justify-content: center; }
   body {
     padding-bottom: 58px;
   }

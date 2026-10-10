@@ -1,0 +1,41 @@
+/* Page-only styles; shared homepage palette and global components are unchanged. */
+.cs-stat .cs-service-highlight { font-size: clamp(1.15rem, 2vw, 1.6rem); line-height: 1.3; }
+.cs-roof-photo-note { display: block; margin: 0.75rem 0; font-size: 0.7rem; color: #aaa; }
+.cs-roof-draft-note { margin: 0; padding: 0.65rem 1rem; color: #ddd; background: #222; text-align: center; font-size: 0.7rem; }
+.cs-roof-gallery-note { margin: 0 0 1rem; text-align: center; color: #eee; font-size: 0.75rem; }
+.cs-roof-card__icon { display: grid; width: 64px; height: 64px; margin: 0 auto 1.5rem; place-items: center; color: #fff; background: var(--cs-navy); border-radius: 50%; }
+.cs-roof-card__icon svg { width: 32px; height: 32px; }
+.cs-roof-scope-note { color: #555; text-align: center; font-size: 0.8rem; margin-top: 2rem; }
+.cs-roof-map { margin-top: 3rem; }
+.cs-roof-map iframe { display: block; width: 100%; height: 350px; border: 0; border-radius: 12px; }
+.cs-navigation a[aria-current="page"] { box-shadow: inset 0 -2px var(--cs-red); }
+
+/* Match the approved homepage feature-photo treatment on service pages only. */
+.cs-service-page .cs-feature__grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.cs-service-page .cs-feature__grid--reverse { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.cs-service-page .cs-feature__media {
+  width: 100%;
+  align-self: center;
+  aspect-ratio: 1.12;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cs-service-page .cs-feature__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.cs-service-page .cs-feature__grid--reverse .cs-feature__content { grid-column: 1; grid-row: 1; }
+.cs-service-page .cs-feature__grid--reverse .cs-feature__media { grid-column: 2; grid-row: 1; }
+@media (max-width: 767px) {
+  .cs-service-page .cs-feature__grid,
+  .cs-service-page .cs-feature__grid--reverse { grid-template-columns: 1fr; }
+  .cs-service-page .cs-feature__media { aspect-ratio: 4 / 3; }
+  .cs-service-page .cs-feature__grid--reverse .cs-feature__media { grid-column: 1; grid-row: 1; }
+  .cs-service-page .cs-feature__grid--reverse .cs-feature__content { grid-column: 1; grid-row: 2; }
+}
