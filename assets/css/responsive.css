@@ -16,7 +16,8 @@
     gap: 0.8rem;
   }
 
-  .cs-navigation__list > li > a {
+  .cs-navigation__list > li > a,
+  .cs-navigation__list summary {
     font-size: 0.69rem;
   }
 
@@ -76,14 +77,16 @@
   }
 
   .cs-navigation {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: var(--cs-mobile-nav-top, 116px);
+    bottom: 0;
     right: 0;
     left: 0;
     display: block;
-    max-height: calc(100vh - 116px);
-    padding: 1rem 1.5rem 1.5rem;
+    max-height: none;
+    padding: 1rem 1.5rem calc(1.5rem + env(safe-area-inset-bottom));
     overflow-y: auto;
+    overscroll-behavior: contain;
     visibility: hidden;
     background: var(--cs-black);
     border-top: 1px solid #333;
@@ -93,7 +96,8 @@
     transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
   }
 
-  .cs-navigation[data-open="true"] {
+  .cs-navigation[data-open="true"],
+  .cs-navigation:not([data-open]) {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
@@ -108,8 +112,10 @@
     border-bottom: 1px solid #292929;
   }
 
-  .cs-navigation__list > li > a {
+  .cs-navigation__list > li > a,
+  .cs-navigation__list summary {
     padding: 0.8rem 0.2rem;
+    min-height: 48px;
   }
 
   .cs-navigation__dropdown {
@@ -131,7 +137,7 @@
 
   .cs-live-hero,
   .cs-live-hero__inner {
-    min-height: 780px;
+    min-height: 546px;
   }
 
   .cs-live-hero__content {
@@ -142,8 +148,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cs-action-gallery {
-    grid-template-columns: repeat(2, 1fr);
+  .cs-action-gallery figure {
+    flex-basis: calc((100% - 0.7rem) / 2);
   }
 
   .cs-review-layout {
@@ -200,16 +206,9 @@
     clip-path: inset(50%);
   }
 
-  .cs-review-bar {
-    flex-wrap: wrap;
-    gap: 0.1rem 0.5rem;
-    padding-block: 0.35rem;
-    font-size: 0.66rem;
-  }
-
   .cs-live-hero,
   .cs-live-hero__inner {
-    min-height: 720px;
+    min-height: 504px;
   }
 
   .cs-live-hero__background {
@@ -221,8 +220,8 @@
   }
 
   .cs-live-hero__inner {
-    align-items: flex-end;
-    padding-block: 4rem;
+    align-items: center;
+    padding-block: 2rem;
   }
 
   .cs-live-hero__content {
@@ -236,14 +235,8 @@
 
   .cs-live-hero__content > p,
   .cs-hero-checks,
-  .cs-hero-rating,
-  .cs-hero-phone {
+  .cs-hero-rating {
     margin-bottom: 1.3rem;
-  }
-
-  .cs-live-hero__offer {
-    width: 100%;
-    max-width: none;
   }
 
   .cs-help {
@@ -295,11 +288,8 @@
     grid-template-columns: 1fr;
   }
 
-  .cs-action-gallery {
-    grid-template-columns: 1fr;
-  }
-
   .cs-action-gallery figure {
+    flex-basis: 100%;
     aspect-ratio: 1.5;
   }
 

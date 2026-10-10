@@ -1,8 +1,224 @@
 {
   "source_document": "chimney-stars.html",
-  "asset_count": 37,
-  "source_asset_bytes": 25354749,
-  "packaged_asset_bytes": 1712831,
+  "asset_count": 70,
+  "source_asset_bytes": 30383877,
+  "packaged_asset_bytes": 6741959,
+  "technician_gallery_assets": [
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-equipment-demonstration-in-driveway.webp",
+      "packaged": "assets/photos/technicians/chimney-equipment-demonstration-in-driveway.webp",
+      "bytes": 170084,
+      "sha256": "4450e1203f8180406773b1d30c93b715d45104adb1a21c003bb75272fec50887"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-inspection-consultation-by-the-fireplace.webp",
+      "packaged": "assets/photos/technicians/chimney-inspection-consultation-by-the-fireplace.webp",
+      "bytes": 152970,
+      "sha256": "a1d38d8d16307a6931dff5c8ca7020c8876902c284d159003f7a0aa62f8e449f"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-inspection-results-in-the-driveway.webp",
+      "packaged": "assets/photos/technicians/chimney-inspection-results-in-the-driveway.webp",
+      "bytes": 151028,
+      "sha256": "52533245bc634bed9fe6956432b839f7aa9ef23c07d2be4725c95330417443cf"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-repair-consultation-outdoors.webp",
+      "packaged": "assets/photos/technicians/chimney-repair-consultation-outdoors.webp",
+      "bytes": 163350,
+      "sha256": "06868f424689d0312695d05882388ed55cc03c29c9791b80b6237c085f2e108c"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-damper-replacement-service.webp",
+      "packaged": "assets/photos/technicians/chimney-star-damper-replacement-service.webp",
+      "bytes": 161768,
+      "sha256": "4a3929b540f22483ebfd752edede161e9161eda5ca50c3ef2196024ad2b813b8"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-field-service-prep.webp",
+      "packaged": "assets/photos/technicians/chimney-star-field-service-prep.webp",
+      "bytes": 127498,
+      "sha256": "6d7069658507119ef7cfa9ecbc5bcc3dc66dac99747d1741c8f4f537c5886e37"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-fireplace-service.webp",
+      "packaged": "assets/photos/technicians/chimney-star-fireplace-service.webp",
+      "bytes": 179128,
+      "sha256": "86cbd80f4f1f5547714b0d2ffe53910ba3deddbe22304710464198f6e45d58b3"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-flashing-repair-crew.webp",
+      "packaged": "assets/photos/technicians/chimney-star-flashing-repair-crew.webp",
+      "bytes": 184362,
+      "sha256": "b15bff210fcfb2c5111f25b5dc40cb0127c96353102220ae8be3b67d3fb39ff1"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-home-vent-inspection.webp",
+      "packaged": "assets/photos/technicians/chimney-star-home-vent-inspection.webp",
+      "bytes": 116556,
+      "sha256": "4fef461322f455af7f8333d3aa9ddd7d197d4da51e5da337b48a1048978a1fc1"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-rooftop-repair-crew.webp",
+      "packaged": "assets/photos/technicians/chimney-star-rooftop-repair-crew.webp",
+      "bytes": 228654,
+      "sha256": "30f52f4c2b0a7fcb0d188f57d2bae0a0c9e34136fd27ccb73e5272c9c0a5bbbb"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-team-photo-01.webp",
+      "packaged": "assets/photos/technicians/chimney-star-team-photo-01.webp",
+      "bytes": 141946,
+      "sha256": "ee90117a8875a3450898c6b83e353a8c240d40a6fc19dc67b60a0bd1c835b28e"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-team-photo-02.webp",
+      "packaged": "assets/photos/technicians/chimney-star-team-photo-02.webp",
+      "bytes": 142436,
+      "sha256": "1930ed40599c101d91082e9c25bde852e239e1136412ffb22d15f749efbbe5c9"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-team-photo-03.webp",
+      "packaged": "assets/photos/technicians/chimney-star-team-photo-03.webp",
+      "bytes": 156534,
+      "sha256": "17fea217fe6d3bd902bbd9bcb7b2ff515acebd19321846a0d97847a85ab27afb"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-team-photo-04.webp",
+      "packaged": "assets/photos/technicians/chimney-star-team-photo-04.webp",
+      "bytes": 148914,
+      "sha256": "951f941968b1dfa35d309648d8a3c98a1439c84120c4da247703eb684530c2e6"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-team-photo-05.webp",
+      "packaged": "assets/photos/technicians/chimney-star-team-photo-05.webp",
+      "bytes": 142292,
+      "sha256": "ff74c6d363d77e361baa401aaaa42eafe913968b13a7635dd9f1ea962d7e2f81"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-team-photo-06.webp",
+      "packaged": "assets/photos/technicians/chimney-star-team-photo-06.webp",
+      "bytes": 154128,
+      "sha256": "0be0d4d576823187389113b5e877d4c958401500ffbe399be363167f1087a815"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-team-photo-07.webp",
+      "packaged": "assets/photos/technicians/chimney-star-team-photo-07.webp",
+      "bytes": 149922,
+      "sha256": "88e69f6dc70dfd5c99f6829841deaef34b2a7216f88e1588f36b964d19196e32"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-technicians-at-work.webp",
+      "packaged": "assets/photos/technicians/chimney-star-technicians-at-work.webp",
+      "bytes": 210394,
+      "sha256": "b68a06a3d79c7f6e450acbbaf7f28af7ea7f9c004fbb4691c127a0f0e1f62c34"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-technicians-prepare-gear.webp",
+      "packaged": "assets/photos/technicians/chimney-star-technicians-prepare-gear.webp",
+      "bytes": 172912,
+      "sha256": "086aa8154b5d3ca1188f0b891a7039b6a84cd8a64551627641d1303143caafa7"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-technicians-preparing-equipment.webp",
+      "packaged": "assets/photos/technicians/chimney-star-technicians-preparing-equipment.webp",
+      "bytes": 180870,
+      "sha256": "dfa207076012f48af7598315fc3039c6340de411d8c7ee595a02f21297da88fd"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-technicians-preparing-for-service.webp",
+      "packaged": "assets/photos/technicians/chimney-star-technicians-preparing-for-service.webp",
+      "bytes": 151174,
+      "sha256": "eaf45495d37cb204c99beac5bad01ba804633ba075fced4f0ba666bb76c9c3b4"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-star-technicians-repairing-a-crown.webp",
+      "packaged": "assets/photos/technicians/chimney-star-technicians-repairing-a-crown.webp",
+      "bytes": 202628,
+      "sha256": "5f183f6a26cf0f4a18acc14f2de72f1f95d4883099674689469f07249167971a"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-technicians-repairing-fireplace.webp",
+      "packaged": "assets/photos/technicians/chimney-technicians-repairing-fireplace.webp",
+      "bytes": 160732,
+      "sha256": "c6571e6aabcbd9b77b25ca9d1c2e36c28a3e466b5a1b5820c151747e44421001"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/chimney-technicians-replacing-fireplace-damper.webp",
+      "packaged": "assets/photos/technicians/chimney-technicians-replacing-fireplace-damper.webp",
+      "bytes": 153382,
+      "sha256": "0dfa2d3692c8bf1bf4051a66e4c034de28f3f9f0aac78287006751d4909f4146"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/laundry-vent-cleaning-consultation.webp",
+      "packaged": "assets/photos/technicians/laundry-vent-cleaning-consultation.webp",
+      "bytes": 137512,
+      "sha256": "e880cad57f5b098966cd1739f828b8947dfdf2e2edea5cba80754184061edd18"
+    },
+    {
+      "source": "../jc-chimneystars.staging/assets/photos/hero/technician-explains-chimney-inspection.webp",
+      "packaged": "assets/photos/technicians/technician-explains-chimney-inspection.webp",
+      "bytes": 166472,
+      "sha256": "eb9a86e753767341f3e21f9c9f6624a7d6734366f74dcc3b75c6a2b62f2b4753"
+    }
+  ],
+  "hero_trust_assets": [
+    {
+      "source": "../assets/monochrome-trust-badges/NFPA-White-.webp",
+      "packaged": "assets/brand/NFPA-White-.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 410546,
+      "sha256": "605fff8cb53f14b2fe07d810bd29b348231f909fe582ec3a9024e221717e8a45"
+    },
+    {
+      "source": "../assets/brand/GBP-Review.webp",
+      "packaged": "assets/brand/google-reviews.webp",
+      "width": 1030,
+      "height": 514,
+      "bytes": 124488,
+      "sha256": "c6cc5af8423bdb29cf6f745c4d462e018e9c4f8f724e22c9e22ea52e32af855f"
+    },
+    {
+      "source": "../assets/brand/clipart3612357.webp",
+      "packaged": "assets/brand/yelp-reviews.webp",
+      "width": 998,
+      "height": 682,
+      "bytes": 16636,
+      "sha256": "84363c4190bd11016ffec4b3198d2b2bf5575bdba14f80501965c1eb8e4da050"
+    },
+    {
+      "source": "../assets/payment-card-logos-svg-webp (1)/visa-color-white-bg.webp",
+      "packaged": "assets/brand/payment-visa.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 50150,
+      "sha256": "f2f8bdee7959247fb110d4e004a1e6648d175359b1686cb37aec44280bc99bd1"
+    },
+    {
+      "source": "../assets/payment-card-logos-svg-webp (1)/mastercard-color-transparent.webp",
+      "packaged": "assets/brand/payment-mastercard.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 101040,
+      "sha256": "4960b9a8e5c8327935b3decd16bae0aa9aa23f2c0e27b1e55cd88ab12daa550e"
+    },
+    {
+      "source": "../assets/payment-card-logos-svg-webp (1)/american-express-color-transparent.webp",
+      "packaged": "assets/brand/payment-american-express.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 70742,
+      "sha256": "95f35a173cb3948fc245c26eed5777339a1c4d57a9e46998db41c2b50e110635"
+    },
+    {
+      "source": "../assets/payment-card-logos-svg-webp (1)/discover-color-white-bg.webp",
+      "packaged": "assets/brand/payment-discover.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 47880,
+      "sha256": "09a5e45273992d6bb4cf417667124d7e395a888c494ca375b651ba18cb91e04f"
+    }
+  ],
   "images": [
     {
       "source": "assets/brand/Chimney Star Monochrome Logo (1).png",

@@ -10,14 +10,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/components.css?v=footer-black-3">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/lead-offer.css">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/gallery-carousel.js?v=shuffle-1" defer></script>
+  <script src="assets/js/lead-offer.js" defer></script>
 </head>
 <body class="cs-page">
   <a class="cs-skip-link" href="#main-content">Skip to main content</a>
 
   <!-- ELEMENTOR THEME BUILDER: Header template -->
+<!-- TOP OFFER BAR -->
+<section
+  class="cs-lead-offer-bar"
+  data-cs-lead-bar
+  aria-label="First-time customer offer"
+>
+  <button
+    class="cs-lead-offer-bar__button"
+    type="button"
+    aria-haspopup="dialog"
+    aria-controls="cs-lead-offer-modal"
+    data-cs-lead-open
+  >
+    <span class="cs-lead-offer-bar__offer">
+      <span>First-Time Customer Discount:</span>
+      <strong>25% Off</strong>
+    </span>
+
+    <span class="cs-lead-offer-bar__timer" data-cs-lead-clock>
+      Offer timer <b data-cs-lead-timer>59:00</b>
+    </span>
+
+    <span class="cs-lead-offer-bar__cta">
+      Request an Estimate <span aria-hidden="true">→</span>
+    </span>
+  </button>
+</section>
   <header class="cs-header" data-cs-header data-elementor-area="header">
     <div class="cs-header__main">
       <div class="cs-container cs-header__inner">
@@ -33,25 +63,41 @@
             <li><a href="https://chimney-star.com/about-us/">About Us</a></li>
             <li><a href="https://chimney-star.com/roofing-services/">Roofing Services</a></li>
             <li class="cs-navigation__group">
-              <a href="https://chimney-star.com/chimney-services/">Chimney Services <span aria-hidden="true">▾</span></a>
+              <details class="cs-nav-details">
+              <summary>Chimney Services <span aria-hidden="true">▾</span></summary>
               <div class="cs-navigation__dropdown">
+                <a href="https://chimney-star.com/chimney-services/">All Chimney Services</a>
                 <a href="https://chimney-star.com/chimney-sweep-service/">Chimney Sweep</a>
                 <a href="https://chimney-star.com/chimney-services/chimney-inspection-service/">Chimney Inspection</a>
                 <a href="https://chimney-star.com/chimney-services/chimney-repair-service/">Chimney Repair</a>
               </div>
+              </details>
             </li>
-            <li><a href="https://chimney-star.com/chimney-services/gas-fireplace-repair-service/">Fireplace Services <span aria-hidden="true">▾</span></a></li>
-            <li><a href="https://chimney-star.com/air-duct-cleaning-in-austin-tx/">Duct Services <span aria-hidden="true">▾</span></a></li>
+            <li class="cs-navigation__group">
+              <details class="cs-nav-details">
+                <summary>Fireplace Services <span aria-hidden="true">▾</span></summary>
+                <div class="cs-navigation__dropdown">
+                  <a href="https://chimney-star.com/chimney-services/gas-fireplace-repair-service/">Gas Fireplace Repair</a>
+                  <a href="https://chimney-star.com/fireplace-services/firebox-masonry-repair/">Firebox Masonry Repair</a>
+                  <a href="https://chimney-star.com/fireplace-services/cleaning/">Fireplace Cleaning</a>
+                </div>
+              </details>
+            </li>
+            <li class="cs-navigation__group">
+              <details class="cs-nav-details">
+                <summary>Duct Services <span aria-hidden="true">▾</span></summary>
+                <div class="cs-navigation__dropdown">
+                  <a href="https://chimney-star.com/air-duct-cleaning-in-austin-tx/">Air Duct Cleaning</a>
+                  <a href="https://chimney-star.com/dryer-vent-services/">Dryer Vent Services</a>
+                  <a href="https://chimney-star.com/air-duct-services/inspection/">Air Duct Inspection</a>
+                </div>
+              </details>
+            </li>
           </ul>
           <a class="cs-button cs-button--outline-light cs-navigation__cta" href="https://chimney-star.com/book-online/">Book Online Now</a>
         </nav>
       </div>
     </div>
-    <a class="cs-review-bar" href="#reviews" aria-label="Read customer reviews">
-      <span>Our Customers Rate Us 5.0 Out of 5.0</span>
-      <strong aria-label="Five stars">★★★★★</strong>
-      <span>Based on 619+ Reviews!</span>
-    </a>
   </header>
 
   <main id="main-content" data-elementor-area="content">
@@ -73,11 +119,39 @@
             <li>Honest, upfront pricing.</li>
           </ul>
           <div class="cs-hero-rating"><strong>5.0</strong> <span aria-label="Five stars">★★★★★</span><small>619+ total reviews</small></div>
-          <a class="cs-hero-phone" href="tel:+15125012755"><span aria-hidden="true">☎</span> 512-501-2755</a>
-          <a class="cs-button cs-button--primary cs-live-hero__offer" href="https://chimney-star.com/book-online/">First-Time Customer Discount</a>
+          <div class="cs-hero-trust" aria-label="Trust badges and review platforms">
+            <div class="cs-hero-trust__credentials" aria-label="Chimney Star trust badges">
+              <img src="assets/brand/trust-badge-ccs.webp" width="280" height="279" alt="Certified Chimney Sweep" decoding="async" fetchpriority="low">
+              <img src="assets/brand/trust-badge-green-check.webp" width="280" height="280" alt="Licensed and insured" decoding="async" fetchpriority="low">
+              <img src="assets/brand/NFPA-White-.webp" width="1254" height="1254" alt="NFPA" decoding="async" fetchpriority="low">
+              <img src="assets/brand/trust-badges-cerc.webp" width="280" height="280" alt="Certified Environmentally Responsible Contractor" decoding="async" fetchpriority="low">
+            </div>
+            <div class="cs-hero-trust__reviews" aria-label="Customer review platforms">
+              <a href="#reviews" aria-label="Read our Google customer reviews"><img src="assets/brand/google-reviews.webp" width="1030" height="514" alt="Google Reviews" decoding="async" fetchpriority="low"></a>
+              <a href="https://www.yelp.com/biz/chimney-star-chimney-sweep-and-air-duct-cleaning-pflugerville-3" aria-label="Read Chimney Star reviews on Yelp"><img src="assets/brand/yelp-reviews.webp" width="998" height="682" alt="Yelp reviews" decoding="async" fetchpriority="low"></a>
+            </div>
+          </div>
+          <div class="cs-hero-payments" aria-label="Payment options">
+            <span>Payment options</span>
+            <div class="cs-hero-payments__cards">
+              <img src="assets/brand/payment-visa.webp" width="1448" height="1086" alt="Visa" decoding="async" fetchpriority="low">
+              <img src="assets/brand/payment-mastercard.webp" width="1448" height="1086" alt="Mastercard" decoding="async" fetchpriority="low">
+              <img src="assets/brand/payment-american-express.webp" width="1448" height="1086" alt="American Express" decoding="async" fetchpriority="low">
+              <img src="assets/brand/payment-discover.webp" width="1448" height="1086" alt="Discover" decoding="async" fetchpriority="low">
+            </div>
+          </div>
+          <div class="cs-hero-actions">
+            <a class="cs-button cs-button--primary" href="https://chimney-star.com/book-online/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18m-11 4 2 2 4-4"/></svg>
+              First Time Customer Discount
+            </a>
+            <a class="cs-button cs-hero-actions__call" href="tel:+15125012755">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 16.9-.8 3.4a2 2 0 0 1-2.2 1.5A20 20 0 0 1 2.2 5a2 2 0 0 1 1.5-2.2L7.1 2l2.3 5.3L7.2 9.5a16 16 0 0 0 7.3 7.3l2.2-2.2L22 16.9Z"/></svg>
+              (512) 501-2755
+            </a>
+          </div>
         </div>
       </div>
-      <button class="cs-hero-playback" type="button" aria-label="Pause photo slideshow" aria-pressed="false" title="Pause photo slideshow" data-cs-hero-playback hidden><span aria-hidden="true">Ⅱ</span></button>
     </section>
 
     <!-- ELEMENTOR: Form widget replacement. Local interaction is preview-only. -->
@@ -146,11 +220,35 @@
     <section class="cs-gallery-process" aria-labelledby="gallery-title">
       <div class="cs-container cs-gallery-wrap">
         <h2 class="cs-display-heading" id="gallery-title">Watch Our Team in Action</h2>
-        <div class="cs-action-gallery">
-          <figure><img src="assets/photos/chimney-star-fireplace-service.webp" width="900" height="675" alt="Chimney Star fireplace service" loading="lazy" decoding="async"></figure>
-          <figure><img src="assets/photos/technician-explains-chimney-inspection.webp" width="900" height="675" alt="Technician explaining a chimney inspection" loading="lazy" decoding="async"></figure>
-          <figure><img src="assets/photos/chimney-star-technicians-repairing-a-crown.webp" width="900" height="675" alt="Technicians repairing a chimney crown" loading="lazy" decoding="async"></figure>
-          <figure><img src="assets/photos/chimney-sweep-chimney-cleaning-after.webp" width="675" height="900" alt="Clean fireplace after chimney sweeping" loading="lazy" decoding="async"></figure>
+        <div class="cs-action-gallery" data-cs-team-carousel aria-label="Chimney Star technicians photo gallery">
+          <div class="cs-action-gallery__track">
+            <figure><img src="assets/photos/technicians/chimney-equipment-demonstration-in-driveway.webp" width="1448" height="1086" alt="chimney equipment demonstration in driveway" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-inspection-consultation-by-the-fireplace.webp" width="1448" height="1086" alt="chimney inspection consultation by the fireplace" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-inspection-results-in-the-driveway.webp" width="1448" height="1086" alt="chimney inspection results in the driveway" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-repair-consultation-outdoors.webp" width="1448" height="1086" alt="chimney repair consultation outdoors" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-damper-replacement-service.webp" width="1448" height="1086" alt="chimney star damper replacement service" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-field-service-prep.webp" width="1448" height="1086" alt="chimney star field service prep" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-fireplace-service.webp" width="1448" height="1086" alt="chimney star fireplace service" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-flashing-repair-crew.webp" width="1448" height="1086" alt="chimney star flashing repair crew" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-home-vent-inspection.webp" width="1448" height="1086" alt="chimney star home vent inspection" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-rooftop-repair-crew.webp" width="1448" height="1086" alt="chimney star rooftop repair crew" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-team-photo-01.webp" width="1448" height="815" alt="chimney star team photo 01" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-team-photo-02.webp" width="1448" height="815" alt="chimney star team photo 02" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-team-photo-03.webp" width="1448" height="815" alt="chimney star team photo 03" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-team-photo-04.webp" width="1448" height="815" alt="chimney star team photo 04" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-team-photo-05.webp" width="1448" height="815" alt="chimney star team photo 05" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-team-photo-06.webp" width="1448" height="815" alt="chimney star team photo 06" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-team-photo-07.webp" width="1448" height="815" alt="chimney star team photo 07" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-technicians-at-work.webp" width="1448" height="1086" alt="chimney star technicians at work" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-technicians-prepare-gear.webp" width="1448" height="1086" alt="chimney star technicians prepare gear" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-technicians-preparing-equipment.webp" width="1448" height="1086" alt="chimney star technicians preparing equipment" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-technicians-preparing-for-service.webp" width="1448" height="1086" alt="chimney star technicians preparing for service" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-star-technicians-repairing-a-crown.webp" width="1448" height="1086" alt="chimney star technicians repairing a crown" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-technicians-repairing-fireplace.webp" width="1448" height="1086" alt="chimney technicians repairing fireplace" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/chimney-technicians-replacing-fireplace-damper.webp" width="1448" height="1086" alt="chimney technicians replacing fireplace damper" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/laundry-vent-cleaning-consultation.webp" width="1448" height="1086" alt="laundry vent cleaning consultation" loading="lazy" decoding="async" fetchpriority="low"></figure>
+            <figure><img src="assets/photos/technicians/technician-explains-chimney-inspection.webp" width="1448" height="1086" alt="technician explains chimney inspection" loading="lazy" decoding="async" fetchpriority="low"></figure>
+          </div>
         </div>
       </div>
       <div class="cs-container cs-process">
@@ -158,10 +256,10 @@
         <h2>Chimney Repair Service</h2>
         <p class="cs-process__subhead">In a Few Simple Steps</p>
         <div class="cs-process-grid">
-          <article class="cs-process-step"><img src="assets/icons/appointment-scheduling-icon.webp" width="144" height="144" alt=""><span>01</span><h3>Consultation Call &amp; Scheduling</h3><p>Get in touch for a consultation and schedule the service appointment.</p></article>
-          <article class="cs-process-step"><img src="assets/icons/chimney-inspection-icon.webp" width="144" height="144" alt=""><span>02</span><h3>Professional Inspection</h3><p>Our team inspects the chimney and fireplace system to identify concerns.</p></article>
-          <article class="cs-process-step"><img src="assets/icons/upfront-pricing-icon.webp" width="144" height="144" alt=""><span>03</span><h3>Get an Estimate</h3><p>Receive a transparent itemized estimate for the recommended services.</p></article>
-          <article class="cs-process-step"><img src="assets/icons/quality-workmanship-icon.webp" width="144" height="144" alt=""><span>04</span><h3>Job Is Done</h3><p>The technicians complete the approved work and review the result with you.</p></article>
+          <article class="cs-process-step"><img src="assets/icons/appointment-scheduling-icon.webp" width="144" height="144" alt=""><h3>Consultation Call &amp; Scheduling</h3><p>Get in touch for a consultation and schedule the service appointment.</p></article>
+          <article class="cs-process-step"><img src="assets/icons/chimney-inspection-icon.webp" width="144" height="144" alt=""><h3>Professional Inspection</h3><p>Our team inspects the chimney and fireplace system to identify concerns.</p></article>
+          <article class="cs-process-step"><img src="assets/icons/upfront-pricing-icon.webp" width="144" height="144" alt=""><h3>Get an Estimate</h3><p>Receive a transparent itemized estimate for the recommended services.</p></article>
+          <article class="cs-process-step"><img src="assets/icons/quality-workmanship-icon.webp" width="144" height="144" alt=""><h3>Job Is Done</h3><p>The technicians complete the approved work and review the result with you.</p></article>
         </div>
       </div>
     </section>
@@ -252,7 +350,22 @@
   <footer class="cs-footer" data-elementor-area="footer">
     <div class="cs-container">
       <div class="cs-footer-top">
-        <a class="cs-footer-brand" href="./"><img src="assets/brand/footer-monochrome-logo.webp" width="440" height="146" alt="Chimney Star"></a>
+        <div class="cs-footer-brand-column">
+          <a class="cs-footer-brand" href="./"><img src="assets/brand/footer-monochrome-logo.webp" width="440" height="146" alt="Chimney Star"></a>
+          <div class="cs-footer-brand-proof">
+
+      <div class="cs-footer-proof__badges" aria-label="Trust badges">
+        <img src="assets/brand/trust-badge-ccs.webp" alt="Certified Chimney Sweep" width="280" height="280" loading="lazy">
+        <img src="assets/brand/footer-licensed-insured.png" alt="Licensed and insured" width="280" height="280" loading="lazy">
+        <img src="assets/brand/NFPA-White-.webp" alt="NFPA" width="280" height="280" loading="lazy">
+        <img src="assets/brand/footer-cerc.png" alt="Certified Environmentally Responsible Contractor" width="280" height="280" loading="lazy">
+      </div>
+      <div class="cs-footer-proof__reviews">
+        <a href="#reviews" aria-label="Google customer reviews"><img src="assets/brand/footer-google-reviews.png" alt="Google Reviews" width="280" height="280" loading="lazy"></a>
+        <a href="https://www.yelp.com/biz/chimney-star-chimney-sweep-and-air-duct-cleaning-pflugerville-3" aria-label="Chimney Star Yelp reviews"><img src="assets/brand/footer-yelp-reviews.png" alt="Yelp Reviews" width="280" height="280" loading="lazy"></a>
+      </div>
+          </div>
+        </div>
         <div class="cs-hours"><h2>Business Hours</h2><dl><div><dt>Monday</dt><dd>7:00 AM–7:00 PM</dd></div><div><dt>Tuesday</dt><dd>7:00 AM–7:00 PM</dd></div><div><dt>Wednesday</dt><dd>7:00 AM–7:00 PM</dd></div><div><dt>Thursday</dt><dd>7:00 AM–7:00 PM</dd></div><div><dt>Friday</dt><dd>7:00 AM–7:00 PM</dd></div><div><dt>Saturday</dt><dd>Closed</dd></div><div><dt>Sunday</dt><dd>7:00 AM–7:00 PM</dd></div></dl></div>
       </div>
       <div class="cs-footer-grid">
@@ -261,9 +374,236 @@
         <div><h2>Useful Links</h2><ul><li><a href="./">Home Page</a></li><li><a href="https://chimney-star.com/about-us/">About Us</a></li><li><a href="https://chimney-star.com/contact/">Contact Us</a></li><li><a href="https://chimney-star.com/book-online/">Book Online</a></li><li><a href="https://chimney-star.com/privacy-policy/">Privacy Policy</a></li></ul></div>
         <div class="cs-footer-locations"><h2>Pflugerville</h2><p><a href="mailto:contact@chimney-star.com">contact@chimney-star.com</a><br><a href="tel:+15125012755">512-501-2755</a><br>14199 N IH 35 #4307, Pflugerville, TX 78660</p><h2>Central Austin</h2><p><a href="mailto:contact@chimney-star.com">contact@chimney-star.com</a><br><a href="tel:+15125012755">512-501-2755</a><br>300 Crockett St, Suite 101, Austin, TX 78704</p></div>
       </div>
+      <div class="cs-footer-actions-row">
+      <div class="cs-footer-proof__payments"><p>Payment options</p><div>
+        <img src="assets/brand/payment-visa.webp" alt="Visa" width="280" height="280" loading="lazy">
+        <img src="assets/brand/payment-mastercard.webp" alt="Mastercard" width="280" height="280" loading="lazy">
+        <img src="assets/brand/payment-american-express.webp" alt="American Express" width="280" height="280" loading="lazy">
+        <img src="assets/brand/payment-discover.webp" alt="Discover" width="280" height="280" loading="lazy">
+      </div></div>
+      <nav class="cs-footer-social" aria-label="Social media and reviews">
+<a href="https://www.facebook.com/Chimneystaraustin/" aria-label="Chimney Star on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14 22v-9h3l.5-4H14V6.8c0-1.1.3-1.8 1.8-1.8H18V1.5c-.4-.1-1.7-.2-3-.2-3 0-5 1.8-5 5.1V9H7v4h3v9Z"/></svg></a>
+          <a href="https://www.instagram.com/chimneystarsweep/" aria-label="Chimney Star on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://twitter.com/chimney_star" aria-label="Chimney Star on X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.4l8.2-9.5L2 2h6.5l4.6 6.8L18.9 2Zm-1.1 18h1.7L7.5 4H5.7Z"/></svg></a>
+          <a href="https://www.yelp.com/biz/chimney-star-chimney-sweep-and-air-duct-cleaning-pflugerville-3" aria-label="Chimney Star on Yelp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="m10 10-4-7c-.4-.8 0-1.5.7-1.7L11.3 0c.9-.2 1.6.4 1.5 1.3L12 9.5c0 1-1.3 1.4-2 .5Zm-2 3-5-1.6c-.8-.3-1.5.2-1.5 1l-.2 3.4c0 .9.8 1.4 1.6 1.1l5.2-2.1c.8-.3.8-1.5-.1-1.8Zm2.2 3-2.5 4.8c-.4.8 0 1.5.8 1.6l3.5.6c.8.1 1.5-.6 1.2-1.4L12 16.3c-.2-.9-1.4-1.1-1.8-.3Zm5-1.5 5.2 1.5c.8.2 1 .9.5 1.6l-2.2 2.6c-.5.6-1.4.5-1.8-.2l-3-4.3c-.5-.8.3-1.6 1.3-1.2Zm-.9-4 4.3-3.3c.7-.6 1.4-.3 1.6.5l1 3.3c.3.8-.4 1.6-1.2 1.5l-5.4-.3c-.9 0-1.1-1.2-.3-1.7Z"/></svg></a>
+<a href="#reviews" aria-label="Google customer reviews"><span aria-hidden="true">G</span></a>
+      </nav>
+      </div>
     </div>
     <div class="cs-footer-bottom">©2026 Chimney Star. All rights reserved.</div>
   </footer>
   <div class="cs-mobile-bar" aria-label="Quick contact actions"><a href="tel:+15125012755">Call 512-501-2755</a><a href="https://chimney-star.com/book-online/">Book Online</a></div>
+<!-- SCROLL-ACTIVATED QUICK LEAD FORM -->
+<section
+  class="cs-lead-sticky"
+  aria-label="Quick service request preview"
+  aria-hidden="true"
+  data-cs-lead-sticky
+  inert
+>
+  <div class="cs-lead-sticky__inner">
+    <div class="cs-lead-sticky__copy">
+      <strong>25% Off Your First Service</strong>
+      <span>Name, phone, and service address. Preview only.</span>
+    </div>
+
+    <form class="cs-lead-sticky__form" data-cs-sticky-form>
+      <label>
+        <span class="cs-lead-sr-only">Name</span>
+        <input
+          type="text"
+          name="sticky-name"
+          autocomplete="name"
+          placeholder="Name"
+          aria-label="Name"
+          required
+        >
+      </label>
+
+      <label>
+        <span class="cs-lead-sr-only">Phone</span>
+        <input
+          type="tel"
+          name="sticky-phone"
+          autocomplete="tel"
+          inputmode="tel"
+          placeholder="Phone"
+          aria-label="Phone"
+          required
+        >
+      </label>
+
+      <label class="cs-lead-sticky__address">
+        <span class="cs-lead-sr-only">Address</span>
+        <input type="text" name="sticky-address" autocomplete="street-address" placeholder="Service address" aria-label="Address">
+      </label>
+
+      <button type="submit">
+        Get Started <span aria-hidden="true">→</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- POPUP LEAD FORM -->
+<div
+  class="cs-lead-modal"
+  id="cs-lead-offer-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cs-lead-offer-title"
+  aria-describedby="cs-lead-offer-description"
+  aria-hidden="true"
+  data-cs-lead-modal
+  hidden
+>
+  <div class="cs-lead-modal__panel" tabindex="-1" data-cs-lead-panel>
+    <button
+      class="cs-lead-modal__close"
+      type="button"
+      aria-label="Close offer form"
+      data-cs-lead-close
+    >
+      <span aria-hidden="true">×</span>
+    </button>
+
+    <div class="cs-lead-modal__brand">
+      <span class="cs-lead-modal__mark" aria-hidden="true">
+        <img
+          src="assets/brand/footer-monochrome-logo.webp"
+          width="440"
+          height="146"
+          alt=""
+        >
+      </span>
+      <span>
+        <small>Chimney Star</small>
+        <strong>Austin's Venting Specialists</strong>
+      </span>
+    </div>
+
+    <p class="cs-lead-modal__eyebrow">First-Time Customer Offer</p>
+    <h2 id="cs-lead-offer-title">Save 25% on Your First Service</h2>
+
+    <p class="cs-lead-modal__timer" data-cs-lead-clock>
+      Offer timer <b data-cs-lead-timer>59:00</b>
+    </p>
+
+    <p class="cs-lead-modal__description" id="cs-lead-offer-description">
+      Tell us what your home needs. This staging form previews the future
+      Forminator lead flow and does not send or store your information.
+    </p>
+
+    <form class="cs-lead-form" data-cs-lead-preview-form>
+      <div class="cs-lead-form__preview" role="note">
+        Preview form only. No lead will be submitted.
+      </div>
+
+      <div class="cs-lead-form__grid">
+        <label class="cs-lead-field">
+          <span>Name <b aria-hidden="true">*</b></span>
+          <input
+            type="text"
+            name="name-1"
+            autocomplete="name"
+            placeholder="Your name"
+            required
+          >
+        </label>
+
+        <label class="cs-lead-field">
+          <span>Phone <b aria-hidden="true">*</b></span>
+          <input
+            type="tel"
+            name="phone-1"
+            autocomplete="tel"
+            inputmode="tel"
+            placeholder="(512) 555-0123"
+            required
+          >
+        </label>
+
+        <label class="cs-lead-field">
+          <span>Email</span>
+          <input
+            type="email"
+            name="email-1"
+            autocomplete="email"
+            placeholder="you@example.com"
+          >
+        </label>
+
+        <label class="cs-lead-field">
+          <span>ZIP Code <b aria-hidden="true">*</b></span>
+          <input
+            type="text"
+            name="zip-1"
+            autocomplete="postal-code"
+            inputmode="numeric"
+            pattern="[0-9]{5}"
+            maxlength="5"
+            placeholder="78701"
+            required
+          >
+        </label>
+
+        <label class="cs-lead-field cs-lead-field--wide">
+          <span>Service Address</span>
+          <input type="text" name="address-1" autocomplete="street-address" placeholder="Street address">
+        </label>
+
+        <label class="cs-lead-field cs-lead-field--wide">
+          <span>Service Needed <b aria-hidden="true">*</b></span>
+          <select name="select-1" required>
+            <option value="">Choose a service</option>
+            <option>Chimney Inspection</option>
+            <option>Chimney Cleaning</option>
+            <option>Chimney Leak or Repair</option>
+            <option>Dryer Vent Cleaning</option>
+            <option>Fireplace Service</option>
+            <option>Roofing Service</option>
+            <option>Other or Not Sure</option>
+          </select>
+        </label>
+      </div>
+
+      <button class="cs-lead-form__submit" type="submit">
+        Request My Service <span aria-hidden="true">→</span>
+      </button>
+
+      <p class="cs-lead-form__fine-print">
+        Mock Forminator layout for staging. The production form ID, consent
+        language, notifications, CRM delivery, and tracking still require setup.
+      </p>
+    </form>
+
+    <div
+      class="cs-lead-modal__status"
+      role="status"
+      aria-live="polite"
+      data-cs-lead-status
+      hidden
+    >
+      <strong>Preview complete.</strong>
+      <span>No information was sent or stored.</span>
+      <button type="button" data-cs-lead-reset>Return to the form</button>
+    </div>
+
+    <p class="cs-lead-modal__phone">
+      Prefer to call?
+      <a href="tel:+15125012755">(512) 501-2755</a>
+    </p>
+  </div>
+</div>
+<div class="cs-float-actions" role="group" aria-label="Quick service actions">
+  <a class="cs-float-actions__button cs-float-actions__button--call" href="tel:+15125012755" aria-label="Call Chimney Star at 512-501-2755">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 3.5 9.5 8 7.8 9.7c1.2 2.5 3.2 4.5 5.7 5.7l1.7-1.7 4.5 2.3v3.1c0 1-.8 1.8-1.8 1.8C9.7 20.4 3.1 13.8 2.6 5.6c0-1 .8-1.8 1.8-1.8l2.8-.3Z"></path></svg>
+    <span>Call Us Now</span>
+  </a>
+  <button class="cs-float-actions__button cs-float-actions__button--booking" type="button" aria-disabled="true" aria-label="Book Service Online, booking link coming soon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path><path d="m8.5 15 2 2 5-5"></path></svg>
+    <span>Book Service Online</span>
+  </button>
+</div>
 </body>
 </html>

@@ -1,35 +1,48 @@
 (() => {
   const toggle = document.querySelector('[data-cs-menu-toggle]');
   const navigation = document.querySelector('[data-cs-navigation]');
+  const header = document.querySelector('[data-cs-header]');
 
-  if (!toggle || !navigation) return;
+  if (!toggle || !navigation || !header) return;
+
+  const mobileQuery = window.matchMedia('(max-width: 1024px)');
+  const disclosures = [...navigation.querySelectorAll('.cs-nav-details')];
+  const closeDisclosures = () => disclosures.forEach(item => { item.open = false; });
+  const syncMobilePanel = () => {
+    if (!mobileQuery.matches) return;
+    document.documentElement.style.setProperty('--cs-mobile-nav-top', `${Math.max(0, Math.round(header.getBoundingClientRect().bottom))}px`);
+  };
 
   const closeMenu = ({ restoreFocus = false } = {}) => {
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Open navigation menu');
     navigation.dataset.open = 'false';
     document.body.classList.remove('cs-menu-open');
-    navigation.inert = true;
+    navigation.inert = mobileQuery.matches;
+    closeDisclosures();
 
     if (restoreFocus) toggle.focus();
   };
 
   const openMenu = () => {
+    syncMobilePanel();
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('aria-label', 'Close navigation menu');
     navigation.dataset.open = 'true';
     document.body.classList.add('cs-menu-open');
     navigation.inert = false;
+    navigation.querySelector('a, summary')?.focus({ preventScroll: true });
   };
 
   const syncNavigation = () => {
-    if (window.matchMedia('(max-width: 1024px)').matches) {
+    if (mobileQuery.matches) {
       closeMenu();
     } else {
       toggle.setAttribute('aria-expanded', 'false');
       navigation.dataset.open = 'false';
       navigation.inert = false;
       document.body.classList.remove('cs-menu-open');
+      closeDisclosures();
     }
   };
 
@@ -39,18 +52,50 @@
   });
 
   navigation.addEventListener('click', (event) => {
-    if (event.target.closest('a') && window.matchMedia('(max-width: 1024px)').matches) {
+    if (event.target.closest('a') && mobileQuery.matches) {
       closeMenu();
     }
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-      closeMenu({ restoreFocus: true });
+    if (event.key === 'Escape') {
+      const activeDisclosure = disclosures.find(item => item.open);
+      if (toggle.getAttribute('aria-expanded') === 'true') {
+        closeMenu({ restoreFocus: true });
+      } else if (activeDisclosure) {
+        closeDisclosures();
+        activeDisclosure.querySelector('summary').focus();
+      }
+    }
+    // Keep keyboard navigation inside the expanded mobile panel and its toggle.
+    if (event.key === 'Tab' && mobileQuery.matches && toggle.getAttribute('aria-expanded') === 'true') {
+      const nodes = [toggle, ...navigation.querySelectorAll('a, summary')].filter(node => node.getClientRects().length > 0);
+      const first = nodes[0];
+      const last = nodes[nodes.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
 
-  window.addEventListener('resize', syncNavigation);
+  disclosures.forEach(item => item.addEventListener('toggle', () => {
+    if (item.open) disclosures.forEach(other => { if (other !== item) other.open = false; });
+  }));
+  document.addEventListener('click', event => {
+    if (!header.contains(event.target)) {
+      closeDisclosures();
+      if (mobileQuery.matches) closeMenu();
+    }
+  });
+  mobileQuery.addEventListener('change', syncNavigation);
+  window.addEventListener('resize', () => {
+    if (navigation.dataset.open === 'true') syncMobilePanel();
+  }, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(syncMobilePanel).observe(header);
   syncNavigation();
 })();
 
@@ -95,13 +140,11 @@
   if (!hero) return;
 
   const slides = [...hero.querySelectorAll('[data-cs-hero-slide]')];
-  const playback = hero.querySelector('[data-cs-hero-playback]');
-  if (slides.length < 2 || !playback) return;
+  if (slides.length < 2) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const prepared = new WeakMap();
   let activeIndex = 0;
-  let paused = reducedMotion.matches;
   let inView = true;
   let intervalId;
   let advancing = false;
@@ -123,7 +166,7 @@
       for (let offset = 1; offset < slides.length; offset += 1) {
         const nextIndex = (activeIndex + offset) % slides.length;
         const loaded = await prepare(slides[nextIndex]);
-        if (paused || document.hidden || !inView) return;
+        if (reducedMotion.matches || document.hidden || !inView) return;
         if (!loaded) continue;
 
         slides[activeIndex].classList.remove('is-active');
@@ -139,28 +182,14 @@
 
   const syncPlayback = () => {
     clearInterval(intervalId);
-    const label = paused ? 'Play photo slideshow' : 'Pause photo slideshow';
-    playback.setAttribute('aria-label', label);
-    playback.setAttribute('title', label);
-    playback.setAttribute('aria-pressed', String(paused));
-    playback.querySelector('span').textContent = paused ? '▶' : 'Ⅱ';
-
-    if (!paused && !document.hidden && inView) {
+    if (!reducedMotion.matches && !document.hidden && inView) {
       prepare(slides[(activeIndex + 1) % slides.length]);
       intervalId = setInterval(advance, 3000);
     }
   };
 
-  playback.hidden = false;
-  playback.addEventListener('click', () => {
-    paused = !paused;
-    syncPlayback();
-  });
   document.addEventListener('visibilitychange', syncPlayback);
-  reducedMotion.addEventListener('change', () => {
-    paused = reducedMotion.matches;
-    syncPlayback();
-  });
+  reducedMotion.addEventListener('change', syncPlayback);
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(([entry]) => {
