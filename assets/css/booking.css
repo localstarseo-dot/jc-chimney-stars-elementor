@@ -1,0 +1,6 @@
+.cs-booking { padding: 2rem 0; background: #fafafa; color: #333; }
+.cs-booking h1 { text-align: center; font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 0.75rem; }
+.cs-booking p { text-align: center; }
+.cs-booking__frame { display: block; width: 100%; height: 1150px; border: 0; background: #fff; margin-top: 2rem; border-radius: 8px; }
+.cs-booking__fallback { font-size: 0.85rem; padding: 1rem 0; }
+@media (max-width: 767px) { .cs-booking .cs-container { width: calc(100% - 1rem); } .cs-booking__frame { height: 1300px; } }

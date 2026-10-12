@@ -1,0 +1,29 @@
+.cs-exit-offer {
+  width: min(600px, calc(100% - 2rem));
+  max-height: calc(100svh - 2rem);
+  overflow: auto;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  color: #fff;
+  background: #151515;
+  border: 1px solid #444;
+  border-top: 4px solid var(--cs-red);
+  border-radius: 16px;
+  text-align: center;
+}
+.cs-exit-offer::backdrop { background: rgb(0 0 0 / 75%); }
+.cs-exit-offer__timer { display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-size: 0.875rem; color: #ddd; }
+.cs-exit-offer__timer b { padding: 0.4rem 0.75rem; border: 1px solid #555; border-radius: 6px; background: #222; color: #fff; font-size: 1.125rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.cs-exit-offer__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+@media (max-width: 480px) { .cs-exit-offer__actions { grid-template-columns: 1fr; } }
+.cs-exit-offer__close { position: absolute; top: 8px; right: 10px; width: 44px; height: 44px; border: 0; background: transparent; color: #fff; font-size: 28px; cursor: pointer; }
+.cs-exit-offer__eyebrow { color: #ffb5b5; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 1rem; }
+.cs-exit-offer h2 { font-size: clamp(1.75rem, 6vw, 2.5rem); color: #fff; margin: 0 0 1rem; }
+.cs-exit-offer p { line-height: 1.6; }
+.cs-exit-offer__form { display: grid; gap: 0.75rem; margin-top: 1.25rem; text-align: left; }
+.cs-exit-offer__form label { font-size: 0.85rem; }
+.cs-exit-offer input { width: 100%; min-height: 48px; padding: 0.75rem; border: 1px solid #555; border-radius: 6px; background: #080808; color: #fff; font: inherit; }
+.cs-exit-offer__note { font-size: 0.75rem; color: #ccc; margin: 0; text-align: center; }
+.cs-exit-offer__continue { margin-top: 1rem; min-height: 44px; background: transparent; border: 0; color: #ddd; text-decoration: underline; cursor: pointer; font: inherit; font-size: 0.85rem; }
+.cs-exit-offer [hidden] { display: none !important; }
+.cs-exit-offer :focus-visible { outline: 3px solid #f5b04c; outline-offset: 3px; }
+html.cs-exit-offer-open { overflow: hidden; }

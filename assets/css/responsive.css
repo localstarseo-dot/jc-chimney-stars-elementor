@@ -376,7 +376,7 @@
     bottom: 0;
     left: 0;
     z-index: 80;
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr;
     min-height: 58px;
     box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.2);

@@ -15,6 +15,19 @@
       const stickyForm = sticky.querySelector("[data-cs-sticky-form]");
       const status = modal.querySelector("[data-cs-lead-status]");
       const resetButton = modal.querySelector("[data-cs-lead-reset]");
+      const voucher = modal.querySelector("[data-cs-voucher]");
+      const claimButton = modal.querySelector("[data-cs-voucher-claim]");
+      const description = modal.querySelector(".cs-lead-modal__description");
+      if (voucher) {
+        form.hidden = true;
+        description.hidden = true;
+        claimButton?.addEventListener("click", () => {
+          voucher.hidden = true;
+          form.hidden = false;
+          description.hidden = false;
+          form.querySelector("input")?.focus();
+        });
+      }
       const openButtons = Array.from(
         document.querySelectorAll("[data-cs-lead-open]")
       );
@@ -205,7 +218,11 @@
       }
 
       openButtons.forEach(button => {
-        button.addEventListener("click", openModal);
+        button.addEventListener("click", event => {
+          event.preventDefault();
+          openModal();
+          if (button.hasAttribute("data-cs-voucher-start")) claimButton?.click();
+        });
       });
 
       closeButton.addEventListener("click", () => closeModal());
@@ -295,7 +312,7 @@
       });
 
       function invite() {
-        if (isOpen) return;
+        if (isOpen || document.querySelector('dialog[open]')) return;
         openModal();
       }
 

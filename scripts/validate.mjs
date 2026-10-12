@@ -21,7 +21,7 @@ const localReferences = [...html.matchAll(/(?:src|href)="([^"#]+)"/gi)]
   .filter(Boolean);
 
 for (const reference of new Set(localReferences)) {
-  const resolved = path.resolve(root, reference);
+  const resolved = path.resolve(path.dirname(htmlPath), reference);
   if (!fs.existsSync(resolved)) errors.push(`Missing local reference: ${reference}`);
 }
 
