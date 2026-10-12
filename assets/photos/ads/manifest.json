@@ -1,0 +1,219 @@
+[
+  {
+    "path": "assets/photos/ads/crown-before.webp",
+    "source": "../assets/Before And After/Chimney Crown Repair Before.png",
+    "width": 1000,
+    "height": 750,
+    "bytes": 204476
+  },
+  {
+    "path": "assets/photos/ads/crown-after.webp",
+    "source": "../assets/Before And After/Chimney Crown Repair After.png",
+    "width": 1000,
+    "height": 750,
+    "bytes": 152754
+  },
+  {
+    "path": "assets/photos/ads/flashing-before.webp",
+    "source": "../assets/Before And After/Chimney Flashing Repair Before.png",
+    "width": 1000,
+    "height": 750,
+    "bytes": 256654
+  },
+  {
+    "path": "assets/photos/ads/flashing-after.webp",
+    "source": "../assets/Before And After/Chimney Flashing Repair After.png",
+    "width": 1000,
+    "height": 750,
+    "bytes": 200022
+  },
+  {
+    "path": "assets/photos/ads/masonry-before.webp",
+    "source": "../assets/Before And After/Chimney Masonry Repair : Repointing Before.png",
+    "width": 1000,
+    "height": 1333,
+    "bytes": 376998
+  },
+  {
+    "path": "assets/photos/ads/masonry-after.webp",
+    "source": "../assets/Before And After/Chimney Masonry Repair : Repointing After.png",
+    "width": 1000,
+    "height": 1333,
+    "bytes": 326228
+  },
+  {
+    "path": "assets/photos/ads/sweep-before.webp",
+    "source": "../assets/Before And After/Chimney Sweep : Chimney Cleaning Before.png",
+    "width": 1000,
+    "height": 1333,
+    "bytes": 292230
+  },
+  {
+    "path": "assets/photos/ads/sweep-after.webp",
+    "source": "../assets/Before And After/Chimney Sweep : Chimney Cleaning After.png",
+    "width": 1000,
+    "height": 1333,
+    "bytes": 190808
+  },
+  {
+    "path": "assets/photos/ads/blockage-before.webp",
+    "source": "../assets/Before And After/Chimney Blockage : Nest Removal Before.png",
+    "width": 1000,
+    "height": 750,
+    "bytes": 136588
+  },
+  {
+    "path": "assets/photos/ads/blockage-after.webp",
+    "source": "../assets/Before And After/Chimney Blockage : Nest Removal After.png",
+    "width": 1000,
+    "height": 750,
+    "bytes": 123234
+  },
+  {
+    "path": "assets/photos/ads/footer-monochrome-logo.webp",
+    "source": "assets/brand/footer-monochrome-logo.webp",
+    "width": 440,
+    "height": 146,
+    "bytes": 7154
+  },
+  {
+    "path": "assets/photos/ads/google-reviews.webp",
+    "source": "assets/brand/google-reviews.webp",
+    "width": 280,
+    "height": 140,
+    "bytes": 11856
+  },
+  {
+    "path": "assets/photos/ads/yelp-reviews.webp",
+    "source": "assets/brand/yelp-reviews.webp",
+    "width": 280,
+    "height": 191,
+    "bytes": 13252
+  },
+  {
+    "path": "assets/photos/ads/trust-badge-ccs.webp",
+    "source": "assets/brand/trust-badge-ccs.webp",
+    "width": 280,
+    "height": 279,
+    "bytes": 15240
+  },
+  {
+    "path": "assets/photos/ads/trust-badge-green-check.webp",
+    "source": "assets/brand/trust-badge-green-check.webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 18668
+  },
+  {
+    "path": "assets/photos/ads/NFPA-White-.webp",
+    "source": "assets/brand/NFPA-White-.webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 13434
+  },
+  {
+    "path": "assets/photos/ads/trust-badges-cerc.webp",
+    "source": "assets/brand/trust-badges-cerc.webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 25502
+  },
+  {
+    "path": "assets/photos/ads/payment-visa.webp",
+    "source": "assets/brand/payment-visa.webp",
+    "width": 280,
+    "height": 210,
+    "bytes": 3964
+  },
+  {
+    "path": "assets/photos/ads/payment-mastercard.webp",
+    "source": "assets/brand/payment-mastercard.webp",
+    "width": 280,
+    "height": 210,
+    "bytes": 9016
+  },
+  {
+    "path": "assets/photos/ads/payment-american-express.webp",
+    "source": "assets/brand/payment-american-express.webp",
+    "width": 280,
+    "height": 210,
+    "bytes": 6596
+  },
+  {
+    "path": "assets/photos/ads/payment-discover.webp",
+    "source": "assets/brand/payment-discover.webp",
+    "width": 280,
+    "height": 210,
+    "bytes": 3706
+  },
+  {
+    "path": "assets/photos/ads/chimney-repair-icon.webp",
+    "source": "assets/icons/chimney-repair-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 3582
+  },
+  {
+    "path": "assets/photos/ads/chimney-leak-repair-icon.webp",
+    "source": "assets/icons/chimney-leak-repair-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 4374
+  },
+  {
+    "path": "assets/photos/ads/masonry-repair-icon.webp",
+    "source": "assets/icons/masonry-repair-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 3802
+  },
+  {
+    "path": "assets/photos/ads/chimney-cap-icon.webp",
+    "source": "assets/icons/chimney-cap-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 3174
+  },
+  {
+    "path": "assets/photos/ads/chimney-sweep-icon.webp",
+    "source": "assets/icons/chimney-sweep-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 4810
+  },
+  {
+    "path": "assets/photos/ads/chimney-inspection-icon.webp",
+    "source": "assets/icons/chimney-inspection-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 4036
+  },
+  {
+    "path": "assets/photos/ads/appointment-scheduling-icon.webp",
+    "source": "assets/icons/appointment-scheduling-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 5958
+  },
+  {
+    "path": "assets/photos/ads/upfront-pricing-icon.webp",
+    "source": "assets/icons/upfront-pricing-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 6160
+  },
+  {
+    "path": "assets/photos/ads/clean-work-area-icon.webp",
+    "source": "assets/icons/clean-work-area-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 5032
+  },
+  {
+    "path": "assets/photos/ads/quality-workmanship-icon.webp",
+    "source": "assets/icons/quality-workmanship-icon.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 5462
+  }
+]

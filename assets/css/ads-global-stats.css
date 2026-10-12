@@ -1,0 +1,42 @@
+/* Generated from the global stats strip supplied as the LP reference. */
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: var(--cs-white);
+  border-bottom: 10px solid var(--cs-red-bright);
+}
+
+.cs-stat {
+  display: flex;
+  min-height: 250px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 2rem 1rem;
+  background: #454545;
+  text-align: center;
+}
+
+.cs-stat:nth-child(even) {
+  background: #303030;
+}
+
+.cs-stat > span {
+  color: var(--cs-gold);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.cs-stat strong {
+  font-size: 2.2rem;
+}
+
+.cs-stat small {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+
+@media (max-width: 767px) { .cs-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cs-stat { min-height: 175px; } .cs-stat strong { font-size: 2rem; } .cs-stat small { font-size: 0.95rem; } }
+@media (max-width: 420px) { .cs-stats { grid-template-columns: 1fr; } .cs-stat { min-height: 145px; } }

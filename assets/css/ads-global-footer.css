@@ -1,0 +1,112 @@
+/* Generated from the approved global footer styles. Rebuild with build-ads-pages.mjs. */
+.cs-ads .cs-footer { --cs-black: #050505; --cs-white: #fff; --cs-yellow: #ffd900; --cs-container: 1140px; line-height: 1.55; }
+.cs-footer .cs-container { width: min(calc(100% - 3rem), var(--cs-container)); margin-inline: auto; }
+.cs-footer h2 { letter-spacing: 0; }
+.cs-footer {
+  color: #929292;
+  background: var(--cs-black);
+}
+
+.cs-footer-top {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.cs-footer-brand {
+  display: block;
+  max-width: 420px;
+}
+
+.cs-footer h2 {
+  margin-bottom: 0.65rem;
+  color: var(--cs-yellow);
+  font-size: 1rem;
+}
+
+.cs-hours {
+  color: var(--cs-white);
+}
+
+.cs-hours dl {
+  margin: 0;
+}
+
+.cs-hours dl div {
+  display: grid;
+  grid-template-columns: 95px 1fr;
+  font-size: 0.78rem;
+}
+
+.cs-hours dd {
+  margin: 0;
+}
+
+.cs-footer-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.9fr 1.5fr;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+}
+
+.cs-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-footer li,
+.cs-footer p {
+  margin-bottom: 0.35rem;
+  font-size: 0.78rem;
+}
+
+.cs-footer a {
+  text-decoration: none;
+}
+
+.cs-footer a:hover {
+  color: var(--cs-white);
+}
+
+.cs-footer-locations p {
+  color: #dedede;
+}
+
+.cs-footer-bottom {
+  padding: 0.7rem 1rem;
+  color: var(--cs-white);
+  border-top: 1px solid #333;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.cs-mobile-bar {
+  display: none;
+}
+.cs-footer-social { display: flex; justify-content: flex-end; gap: 8px; margin: 1.25rem 0 2rem; }
+.cs-footer-social a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 6px; color: #fff; background: #444; text-decoration: none; font-size: 28px; font-weight: 700; }
+.cs-footer-social a[href*="facebook"] { background: #3b5998; }
+.cs-footer-social a[href*="twitter"] { background: #1da1f2; }
+.cs-footer-social a[href*="yelp"] { background: #b90000; }
+.cs-footer-social svg { width: 26px; height: 26px; }
+.cs-footer-brand-column { min-width: 0; }
+.cs-footer-brand-proof { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1.5rem; }
+.cs-footer-brand-proof .cs-footer-proof__badges, .cs-footer-brand-proof .cs-footer-proof__reviews { gap: 12px; }
+.cs-footer-brand-proof .cs-footer-proof__reviews img { width: 95px; }
+.cs-footer-actions-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.5rem 0; margin-top: 1.5rem; border-top: 1px solid #333; }
+.cs-footer-actions-row .cs-footer-social { margin: 0; }
+@media (max-width: 640px) { .cs-footer-brand-proof, .cs-footer-actions-row { justify-content: center; } }
+.cs-footer-social a:focus-visible { outline: 3px solid var(--cs-yellow); outline-offset: 3px; }
+.cs-footer-proof { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 2rem; border-top: 1px solid #333; }
+.cs-footer-proof__badges, .cs-footer-proof__reviews, .cs-footer-proof__payments > div { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.cs-footer-proof__badges img { width: 58px; height: 58px; object-fit: contain; filter: grayscale(1); }
+.cs-footer-proof__reviews img { width: 110px; height: 64px; object-fit: contain; filter: grayscale(1); }
+.cs-footer-proof__payments p { margin: 0 0 8px; font-size: 0.8rem; }
+.cs-footer-proof__payments img { width: 54px; height: 36px; object-fit: contain; background: #fff; border-radius: 4px; filter: none; }
+@media (max-width: 640px) { .cs-footer-social { justify-content: center; } .cs-footer-proof { justify-content: center; text-align: center; } }
+
+@media (max-width: 1024px) { .cs-footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 767px) { .cs-footer-top, .cs-footer-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,142 @@
+/* Generated from approved service inventory and service areas. */
+.cs-inventory {
+  padding: 3.8rem 0 5rem;
+  color: #58595d;
+  background: var(--cs-warm-white);
+}
+
+.cs-rule-heading {
+  display: grid;
+  grid-template-columns: minmax(50px, 100px) auto minmax(50px, 100px);
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.8rem;
+  text-align: center;
+}
+
+.cs-rule-heading span {
+  height: 3px;
+  background: var(--cs-red);
+}
+
+.cs-rule-heading h2 {
+  margin: 0;
+  color: #5b5c60;
+}
+
+.cs-rule-heading--second {
+  margin-top: 4rem;
+}
+
+.cs-inventory-list {
+  display: grid;
+  gap: 0.9rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-inventory-list--three {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, auto);
+  grid-auto-flow: column;
+}
+
+.cs-inventory-list--four {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, auto);
+  grid-auto-flow: column;
+}
+
+.cs-inventory-list li {
+  position: relative;
+  padding-left: 1.3rem;
+  break-inside: avoid;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.cs-inventory-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--cs-red);
+  content: "⚒";
+}
+
+
+.cs-areas {
+  padding: 4.5rem 0;
+  background: #fff;
+  border-bottom: 8px solid #2a2a2a;
+}
+
+.cs-area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem 4rem;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-area-grid li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.cs-area-grid li::before {
+  position: absolute;
+  left: 0;
+  color: var(--cs-red);
+  content: "●";
+  font-size: 0.65rem;
+}
+
+
+.cs-live-heading {
+  margin-bottom: 2.25rem;
+  text-align: center;
+}
+
+.cs-live-heading h2 {
+  margin-bottom: 0.35rem;
+}
+
+.cs-live-heading p {
+  margin-bottom: 0;
+}
+
+.cs-live-heading--light,
+.cs-live-heading--light h2 {
+  color: var(--cs-white);
+}
+
+.cs-pill {
+  display: inline-flex;
+  min-width: 195px;
+  justify-content: center;
+  padding: 0.18rem 1.1rem;
+  color: var(--cs-red);
+  background: #f1dada;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+
+.cs-inventory, .cs-areas { line-height: 1.55; }
+.cs-inventory h2, .cs-areas h2 { font-size: clamp(2rem, 3.2vw, 3.1rem); font-weight: 800; letter-spacing: 0; }
+.cs-areas { color: var(--cs-navy); }
+@media (max-width: 1024px) { .cs-inventory-list--four { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(14, auto); } }
+@media (max-width: 767px) {
+  .cs-inventory .cs-container, .cs-areas .cs-container { width: calc(100% - 2rem); }
+  .cs-rule-heading { grid-template-columns: 35px auto 35px; gap: 0.6rem; }
+  .cs-rule-heading h2 { font-size: 1.75rem; }
+  .cs-inventory-list--three, .cs-inventory-list--four { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; gap: 1rem; }
+  .cs-area-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.25rem; }
+}
+@media (max-width: 420px) { .cs-inventory-list--three, .cs-inventory-list--four, .cs-area-grid { grid-template-columns: 1fr; } }

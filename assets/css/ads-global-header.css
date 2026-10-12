@@ -1,0 +1,382 @@
+/* Generated from the approved global navigation/top bar. */
+:root {
+  --cs-red: #a90100;
+  --cs-red-bright: #c40000;
+  --cs-red-dark: #730000;
+  --cs-black: #050505;
+  --cs-black-soft: #171717;
+  --cs-navy: #1c1e3d;
+  --cs-warm-white: #f8f3ef;
+  --cs-white: #fff;
+  --cs-gray: #5b5c60;
+  --cs-muted: #8a8a8a;
+  --cs-gold: #a99767;
+  --cs-yellow: #ffd900;
+  --cs-line: #d9d9d9;
+  --cs-container: 1140px;
+  --cs-radius: 18px;
+  --cs-shadow: 0 18px 44px rgba(0, 0, 0, 0.14);
+}
+.cs-container { width: min(calc(100% - 3rem), var(--cs-container)); margin-inline: auto; }
+.cs-header { font-size: 16px; line-height: 1.55; }
+.cs-page.cs-menu-open { overflow: hidden; }
+.cs-page.cs-menu-open .ads-sticky { visibility: hidden; }
+.cs-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.72rem 1.45rem;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.cs-button:hover {
+  transform: translateY(-2px);
+}
+
+.cs-button--primary {
+  color: var(--cs-white);
+  background: var(--cs-red-bright);
+}
+
+.cs-button--primary:hover {
+  background: #e00000;
+}
+
+.cs-button--outline-light {
+  color: var(--cs-white);
+  background: var(--cs-red);
+  border-color: var(--cs-white);
+}
+
+.cs-button--outline-light:hover {
+  color: var(--cs-red);
+  background: var(--cs-white);
+}
+
+
+.cs-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  color: var(--cs-white);
+  background: var(--cs-black);
+}
+
+.cs-review-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  background: var(--cs-red);
+  color: var(--cs-white);
+  font-size: clamp(0.75rem, 1.1vw, 1rem);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.cs-review-strip__stars {
+  color: #f5b04c;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+.cs-header__inner {
+  display: flex;
+  min-height: 74px;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Reference header: wider desktop layout and readable, evenly spaced labels. */
+@media (min-width: 1200px) {
+  .cs-header__inner {
+    width: min(calc(100% - 4rem), 1408px);
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+
+  .cs-header .cs-navigation {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(1rem, 2vw, 2rem);
+    min-width: 0;
+  }
+
+  .cs-header .cs-navigation__list {
+    flex: 1;
+    justify-content: center;
+    gap: clamp(1rem, 3.1vw, 3.25rem);
+  }
+
+  .cs-header .cs-navigation__list > li > a,
+  .cs-header .cs-navigation__list summary {
+    font-size: clamp(1rem, 1.15vw, 1.125rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5;
+    padding-block: 1.45rem;
+  }
+
+  .cs-header .cs-navigation__cta {
+    flex-shrink: 0;
+    min-width: 196px;
+    font-size: 1rem;
+  }
+}
+
+.cs-brand {
+  display: block;
+  width: 178px;
+  flex: 0 0 178px;
+}
+
+.cs-brand img {
+  width: 100%;
+}
+
+.cs-navigation {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.cs-navigation__list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 2.3vw, 2.8rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-navigation__list > li {
+  position: relative;
+}
+
+.cs-navigation__list > li > a,
+.cs-navigation__list summary {
+  display: block;
+  padding: 1.55rem 0;
+  font-size: 0.83rem;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  list-style: none;
+}
+
+.cs-navigation__list summary::-webkit-details-marker { display: none; }
+
+.cs-navigation__list summary span {
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+
+.cs-nav-details[open] > summary span { transform: rotate(180deg); }
+
+.cs-navigation__list > li > a:hover,
+.cs-navigation__list summary:hover,
+.cs-nav-details[open] > summary {
+  color: #f2b0b0;
+}
+
+.cs-navigation__dropdown {
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  display: grid;
+  width: 230px;
+  padding: 0.55rem;
+  visibility: hidden;
+  background: var(--cs-black);
+  border-top: 3px solid var(--cs-red);
+  box-shadow: var(--cs-shadow);
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.cs-navigation__dropdown a {
+  min-height: 44px;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.cs-navigation__dropdown a:hover {
+  background: #242424;
+}
+
+.cs-nav-details[open] > .cs-navigation__dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cs-navigation__cta {
+  min-width: 175px;
+}
+
+.cs-menu-toggle {
+  display: none;
+}
+
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .cs-header__inner {
+    gap: 1rem;
+  }
+
+  .cs-brand {
+    width: 150px;
+    flex-basis: 150px;
+  }
+
+  .cs-navigation {
+    gap: 0.8rem;
+  }
+
+  .cs-navigation__list {
+    gap: 0.8rem;
+  }
+
+  .cs-navigation__list > li > a,
+  .cs-navigation__list summary {
+    font-size: 0.69rem;
+  }
+
+  .cs-navigation__cta {
+    min-width: 140px;
+    padding-inline: 0.7rem;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cs-header__main {
+    position: relative;
+  }
+
+  .cs-header__inner {
+    min-height: 72px;
+    justify-content: space-between;
+  }
+
+  .cs-menu-toggle {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.7rem;
+    color: var(--cs-white);
+    background: transparent;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cs-menu-toggle__icon {
+    display: grid;
+    width: 22px;
+    gap: 4px;
+  }
+
+  .cs-menu-toggle__icon span {
+    display: block;
+    height: 2px;
+    background: currentColor;
+    transition: transform 160ms ease, opacity 160ms ease;
+  }
+
+  .cs-menu-toggle[aria-expanded="true"] .cs-menu-toggle__icon span:first-child {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .cs-menu-toggle[aria-expanded="true"] .cs-menu-toggle__icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .cs-menu-toggle[aria-expanded="true"] .cs-menu-toggle__icon span:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .cs-navigation {
+    position: fixed;
+    top: var(--cs-mobile-nav-top, 116px);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    max-height: none;
+    padding: 1rem 1.5rem calc(1.5rem + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    visibility: hidden;
+    background: var(--cs-black);
+    border-top: 1px solid #333;
+    box-shadow: var(--cs-shadow);
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+  }
+
+  .cs-navigation[data-open="true"],
+  .cs-navigation:not([data-open]) {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cs-navigation__list {
+    display: grid;
+    gap: 0;
+  }
+
+  .cs-navigation__list > li {
+    border-bottom: 1px solid #292929;
+  }
+
+  .cs-navigation__list > li > a,
+  .cs-navigation__list summary {
+    padding: 0.8rem 0.2rem;
+    min-height: 48px;
+  }
+
+  .cs-navigation__dropdown {
+    position: static;
+    display: grid;
+    width: auto;
+    padding: 0 0 0.65rem 1rem;
+    visibility: visible;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .cs-navigation__cta {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+
+}
+@media (max-width: 767px) {
+  .cs-header .cs-container { width: min(calc(100% - 2rem), var(--cs-container)); }
+  .cs-brand { width: 160px; flex-basis: 160px; }
+  .cs-menu-toggle__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
+@media (prefers-reduced-motion: reduce) { .cs-header *, .cs-header *::before, .cs-header *::after { transition: none !important; } }

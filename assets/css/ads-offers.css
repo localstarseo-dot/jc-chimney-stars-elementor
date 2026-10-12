@@ -1,0 +1,17 @@
+/* Native dialogs use approved global voucher visuals without global form styles. */
+.cs-ads .ads-offer-dialog { width: min(610px, calc(100% - 2rem)); padding: 2rem; }
+.ads-offer-dialog > img { width: 176px; height: auto; margin: 0 0 1.5rem; }
+.cs-ads .ads-dialog-close { font-size: 1.5rem; }
+.cs-ads .cs-voucher-section { border-top: 12px solid var(--cs-red); }
+.cs-ads .cs-voucher-section h2 { letter-spacing: 0; }
+.cs-ads .ads-exit-dialog h2 { font-weight: 800; letter-spacing: -0.025em; }
+.cs-ads .cs-offer-actions a, .cs-ads .cs-exit-offer__actions a { text-decoration: none; }
+.cs-ads .cs-button--primary { color: #fff; }
+.cs-ads .cs-button--call-white { color: #111; }
+.cs-ads .cs-voucher__claim { text-decoration: none; }
+html:has(.ads-exit-dialog[open]) { overflow: hidden; }
+html:has(.ads-offer-dialog[open], .ads-exit-dialog[open]) .ads-sticky { visibility: hidden; }
+@media (max-width: 640px) {
+  .cs-ads .ads-offer-dialog { padding: 1.25rem; }
+  .ads-offer-dialog > img { width: 155px; margin-bottom: 1rem; }
+}
