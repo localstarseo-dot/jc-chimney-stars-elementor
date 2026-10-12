@@ -1,6 +1,7 @@
 /* Dedicated Ads system. Does not change the approved general website. */
 .cs-page { margin: 0; background: #f7f3ee; font-family: Poppins, Arial, sans-serif; }
-.cs-ads { --ads-red: #c40000; --ads-dark: #121212; --ads-cream: #f7f3ee; --ads-gold: #f4b44c; color: #303030; padding-bottom: 92px; font-size: 15px; line-height: 1.65; }
+.cs-ads { --ads-red: #c40000; --ads-dark: #121212; --ads-cream: #f7f3ee; --ads-gold: #f4b44c; --ads-sticky-height: calc(78px + env(safe-area-inset-bottom)); color: #303030; font-size: 15px; line-height: 1.65; }
+.cs-ads .cs-footer { padding-bottom: var(--ads-sticky-height); }
 .cs-ads *, .cs-ads *::before, .cs-ads *::after { box-sizing: border-box; }
 .cs-ads img { display: block; max-width: 100%; height: auto; }
 .cs-ads a { color: inherit; }
@@ -197,7 +198,7 @@ html:has(.ads-offer-dialog[open]) { overflow: hidden; }
   .ads-sticky__inner > a { display: none; }
   .ads-sticky .ads-actions { width: 100%; max-width: none; grid-template-columns: 1fr 1fr; gap: 8px; }
   .ads-sticky .ads-button { min-height: 46px; font-size: 0.8125rem; }
-  .cs-ads { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .cs-ads { --ads-sticky-height: calc(72px + env(safe-area-inset-bottom)); }
 }
 @media (max-width: 420px) {
   .ads-concern-grid { grid-template-columns: 1fr; }

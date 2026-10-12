@@ -174,7 +174,7 @@ function render(page) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/ads-pages.css?v=ads-intent-7">
+  <link rel="stylesheet" href="../assets/css/ads-pages.css?v=ads-footer-8">
   <link rel="stylesheet" href="../assets/css/ads-global-header.css?v=ads-3">
   <link rel="stylesheet" href="../assets/css/ads-global-footer.css?v=ads-2">
   <link rel="stylesheet" href="../assets/css/ads-global-directories.css?v=ads-4">
@@ -183,7 +183,7 @@ function render(page) {
   <link rel="stylesheet" href="../assets/css/ads-global-offers.css?v=ads-1">
   <link rel="stylesheet" href="../assets/css/exit-offer.css?v=release-20261013">
   <link rel="stylesheet" href="../assets/css/ads-offers.css?v=ads-1">
-  <script src="../assets/js/ads-pages.js?v=ads-2" defer></script>
+  <script src="../assets/js/ads-pages.js?v=ads-footer-3" defer></script>
   <script src="../assets/js/ads-offers.js?v=ads-1" defer></script>
   <script src="../assets/js/gallery-carousel.js?v=shuffle-1" defer></script>
   <script src="../assets/js/main.js?v=release-20261013" defer></script>

@@ -2,6 +2,15 @@
   const root = document.querySelector('.cs-ads');
   if (!root || root.dataset.ready === 'true') return;
   root.dataset.ready = 'true';
+  const sticky = root.querySelector('.ads-sticky');
+  if (sticky) {
+    const reserveStickyHeight = () => {
+      root.style.setProperty('--ads-sticky-height', `${Math.ceil(sticky.getBoundingClientRect().height)}px`);
+    };
+    reserveStickyHeight();
+    if ('ResizeObserver' in window) new ResizeObserver(reserveStickyHeight).observe(sticky);
+    else window.addEventListener('resize', reserveStickyHeight, { passive: true });
+  }
   root.querySelectorAll('[data-ads-compare]').forEach(component => {
     const stage = component.querySelector('[data-ads-stage]');
     const input = component.querySelector('[data-ads-range]');
