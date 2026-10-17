@@ -4,7 +4,7 @@ export default [
   {
     slug: 'lp-1', intent: 'repair', service: 'Chimney Repair',
     gallery: galleries.repair,
-    offer: { headline: '$100 Off Repairs Over $1,000', claim: 'Claim $100 Off', detail: 'Applies to chimney repairs over $1,000.', eyebrow: 'Chimney Repair Offer' },
+    offer: { headline: '10% Off Repairs', claim: 'Claim 10% Off', detail: 'Save 10% on chimney repairs.', eyebrow: 'Chimney Repair Offer' },
     showcaseTitle: 'Professional Chimney Repair Services',
     showcaseIntro: 'From a chimney leak to damaged masonry, start with an assessment and a clear repair scope.',
     cards: [
@@ -17,7 +17,6 @@ export default [
       ['chimney-repair-icon', 'Chimney Liner Repair', 'Discuss liner concerns and whether further assessment is needed.'],
       ['masonry-repair-icon', 'Chimney Restoration', 'Agree on the condition, repair scope, and project requirements.']
     ],
-    eyebrow: 'Local chimney repair • Austin, TX',
     headline: 'Chimney Repair in Austin, TX',
     intro: 'Leaks, worn masonry, or damaged chimney components? Tell us what you have noticed. Our team can assess your chimney and explain the repair options before you approve work.',
     hero: 'assets/photos/technicians/chimney-star-technicians-repairing-a-crown.webp', heroWidth: 1448, heroHeight: 1086,
@@ -63,7 +62,6 @@ export default [
       ['clean-work-area-icon', 'Soot & Buildup Cleaning', 'Ask about visible buildup and the cleaning work that is appropriate.'],
       ['chimney-cap-icon', 'Blockage Assessment', 'Describe any blockage concerns before planning cleaning or removal work.']
     ],
-    eyebrow: 'Local chimney sweeping • Austin, TX',
     headline: 'Chimney Cleaning in Austin, TX',
     intro: 'Ready to schedule a chimney sweep? Tell us about your fireplace, how often you use it, and when it was last serviced. Our team can explain the cleaning scope and help arrange your visit.',
     hero: 'assets/photos/technicians/chimney-star-fireplace-service.webp', heroWidth: 1200, heroHeight: 900,
@@ -109,7 +107,6 @@ export default [
       ['fireplace-repair-icon', 'Fireplace Assessment', 'Review the fireplace and accessible components within the agreed scope.'],
       ['upfront-pricing-icon', 'Findings & Next Steps', 'Ask about documentation, observations, and recommended further service.']
     ],
-    eyebrow: 'Local chimney inspections • Austin, TX',
     headline: 'Chimney Inspection in Austin, TX',
     intro: 'Want a clearer picture of your chimney’s condition? Tell us why you need an inspection. Our team can help clarify the inspection scope and discuss findings and recommended next steps.',
     hero: 'assets/photos/technicians/chimney-inspection-consultation-by-the-fireplace.webp', heroWidth: 1200, heroHeight: 900,

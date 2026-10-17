@@ -51,23 +51,19 @@
 .ads-hero__image { position: absolute; inset: 0; z-index: -2; }
 .ads-hero__image img { width: 100%; height: 100%; object-fit: cover; object-position: center 43%; }
 .ads-hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(0 0 0 / 93%) 0%, rgb(0 0 0 / 78%) 40%, rgb(0 0 0 / 20%) 100%); }
-.ads-hero__inner { padding-block: clamp(3rem, 5.5vw, 5.5rem); }
+.ads-hero__inner { padding-block: clamp(3rem, 4.5vw, 4.5rem); }
 .ads-hero__content { max-width: 660px; }
-.ads-hero h1 { font-size: clamp(2.4rem, 4.3vw, 3.9rem); font-weight: 800; margin-bottom: 1.5rem; max-width: 15ch; }
-.ads-hero__intro { max-width: 60ch; font-size: 1rem; line-height: 1.8; color: #e4e4e4; }
-.ads-review-proof { display: flex; align-items: center; gap: 1.3rem; margin: 1.8rem 0; }
+.ads-hero h1 { font-size: clamp(2.4rem, 4.3vw, 3.9rem); font-weight: 800; margin: 0 0 1.25rem; max-width: 15ch; }
+.ads-hero__intro { max-width: 60ch; font-size: 1rem; line-height: 1.8; color: #e4e4e4; margin-bottom: 0; }
+.ads-review-proof { display: flex; align-items: center; gap: 1.3rem; margin: 1.5rem 0; }
 .ads-review-proof > a { width: 105px; flex: 0 0 105px; }
 .ads-review-proof > a img { width: 100%; height: 60px; object-fit: contain; }
 .ads-rating { display: grid; gap: 0.15rem; font-size: 0.75rem; }
 .ads-rating strong { font-size: 0.9375rem; }
 .ads-rating > span { color: #ddd; }
-.ads-trust-row { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 28px; margin: 1.5rem 0 2rem; }
-.ads-badges { display: flex; align-items: center; gap: 10px; height: 56px; }
-.ads-badges img { width: 52px; height: 52px; object-fit: contain; }
-.ads-payments { display: grid; gap: 6px; }
-.ads-payments > span { font-size: 0.6875rem; color: #ddd; }
-.ads-payments > div { display: flex; align-items: center; gap: 6px; height: 56px; }
-.ads-payments img { width: 48px; height: 36px; object-fit: contain; background: #fff; border-radius: 4px; }
+.ads-trust-row { display: flex; align-items: center; margin: 1.5rem 0 1.75rem; }
+.ads-badges { display: flex; align-items: center; gap: 24px; }
+.ads-badges img { width: 76px; height: 76px; flex: 0 0 76px; object-fit: contain; }
 .ads-hero__note { font-size: 0.75rem; color: #ccc; margin: 1rem 0 0; }
 .ads-concern-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
 .ads-concern-card { display: flex; flex-direction: column; padding: 1.5rem; background: #fff; border: 1px solid #e8e1db; border-radius: 12px; text-decoration: none; box-shadow: 0 6px 22px rgb(0 0 0 / 3%); }
@@ -173,15 +169,17 @@ html:has(.ads-offer-dialog[open]) { overflow: hidden; }
   .ads-header__actions .ads-button { min-height: 42px; font-size: 0.75rem; padding: 0.55rem 0.7rem; }
   .ads-hero__image img { object-position: 62% center; }
   .ads-hero::after { background: rgb(0 0 0 / 78%); }
-  .ads-hero__inner { padding-block: 2.5rem; }
+  .ads-hero__inner { padding-block: 2rem; }
   .ads-hero__content { text-align: center; margin-inline: auto; }
   .ads-hero h1 { margin-inline: auto; font-size: clamp(2rem, 8vw, 3rem); }
   .ads-hero__intro { font-size: 0.9375rem; }
-  .ads-review-proof { justify-content: center; gap: 0.75rem; }
+  .ads-review-proof { justify-content: center; gap: 0.75rem; margin-block: 1.25rem; }
   .ads-review-proof > a { width: 78px; flex-basis: 78px; }
   .ads-rating { font-size: 0.625rem; }
   .ads-rating strong { font-size: 0.8125rem; }
   .ads-trust-row { justify-content: center; }
+  .ads-badges { gap: 18px; }
+  .ads-badges img { width: 64px; height: 64px; flex-basis: 64px; }
   .ads-actions { grid-template-columns: 1fr; margin-inline: auto; }
   .ads-work-grid, .ads-review-grid, .ads-faqs__grid, .ads-booking__grid { grid-template-columns: 1fr; }
   .ads-project h3 { min-height: 0; }
@@ -202,12 +200,14 @@ html:has(.ads-offer-dialog[open]) { overflow: hidden; }
 }
 @media (max-width: 420px) {
   .ads-concern-grid { grid-template-columns: 1fr; }
-  .ads-badges { gap: 8px; }
-  .ads-badges img { width: 46px; height: 46px; }
   .ads-process-grid { grid-template-columns: 1fr; }
   .ads-review-proof { gap: 0.5rem; }
   .ads-review-proof > a { width: 68px; flex-basis: 68px; }
   .ads-sticky .ads-button { padding-inline: 0.5rem; gap: 0.4rem; font-size: 0.75rem; }
   .ads-sticky svg { width: 17px; height: 17px; flex-basis: 17px; }
+}
+@media (max-width: 359px) {
+  .ads-badges { gap: 16px; }
+  .ads-badges img { width: 56px; height: 56px; flex-basis: 56px; }
 }
 @media (prefers-reduced-motion: no-preference) { .cs-ads { scroll-behavior: smooth; } }

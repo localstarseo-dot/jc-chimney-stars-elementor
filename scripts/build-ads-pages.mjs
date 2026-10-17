@@ -12,7 +12,10 @@ const globalFooter = footerMatch[0].replace(/(src|href)="(?!https?:|tel:|mailto:
 const headerMatch = homepage.match(/<header class="cs-header"[\s\S]*?<\/header>/);
 const reviewStripMatch = homepage.match(/<div class="cs-review-strip"[\s\S]*?<\/div>/);
 if (!headerMatch || !reviewStripMatch) throw new Error('Approved global navigation or review top bar was not found.');
-const globalHeader = headerMatch[0].replace(/(src|href)="(?!https?:|tel:|mailto:|#)([^"]+)"/g, (_, attribute, value) => attribute + '="../' + value + '"') + '\n' + reviewStripMatch[0];
+const lpReviewStrip = reviewStripMatch[0]
+  .replace('Our Customers Rate Us ', '<span class="ads-review-desktop-copy">Our Customers Rate Us </span>')
+  .replace('Based On ', '<span class="ads-review-desktop-copy">Based On </span>');
+const globalHeader = headerMatch[0].replace(/(src|href)="(?!https?:|tel:|mailto:|#)([^"]+)"/g, (_, attribute, value) => attribute + '="../' + value + '"') + '\n' + lpReviewStrip;
 const voucherMatch = homepage.match(/<section class="cs-voucher-section"[\s\S]*?<\/section>/);
 if (!voucherMatch) throw new Error('Approved discount section was not found.');
 const globalVoucher = voucherMatch[0].replace('<button class="cs-button cs-button--primary cs-voucher__claim" type="button" data-cs-lead-open data-cs-voucher-start>', '<a class="cs-button cs-button--primary cs-voucher__claim" href="../book-online/" data-ads-offer-open>').replace('Claim My Discount</button>', 'Claim My Discount</a>');
@@ -43,6 +46,10 @@ ${responsiveStyles.slice(0, mobileNavEnd)}
   .cs-header .cs-container { width: min(calc(100% - 2rem), var(--cs-container)); }
   .cs-brand { width: 160px; flex-basis: 160px; }
   .cs-menu-toggle__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .cs-review-strip { flex-wrap: nowrap; white-space: nowrap; gap: clamp(8px, 2.5vw, 16px); padding: 0.55rem 0.5rem; min-height: 36px; font-size: clamp(10px, 3vw, 12px); }
+  .cs-review-strip > span { flex: 0 0 auto; }
+  .cs-review-strip__stars { font-size: clamp(14px, 4vw, 17px); letter-spacing: 0; }
+  .ads-review-desktop-copy { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 }
 @media (prefers-reduced-motion: reduce) { .cs-header *, .cs-header *::before, .cs-header *::after { transition: none !important; } }
 `;
@@ -130,8 +137,6 @@ const reviews = [
 ];
 const badges = ['trust-badge-ccs', 'trust-badge-green-check', 'NFPA-White-', 'trust-badges-cerc'];
 const badgeLabels = ['Certified Chimney Sweep', 'Licensed and insured', 'NFPA', 'Certified Environmentally Responsible Contractor'];
-const payments = ['visa', 'mastercard', 'american-express', 'discover'];
-const paymentLabels = ['Visa', 'Mastercard', 'American Express', 'Discover'];
 
 function workCard(work, i) {
   if (!work.pair) return '<article class="ads-project"><h3>' + escape(work.title) + '</h3><figure class="ads-project__photo">' + img(work.image, work.alt, work.width, work.height) + '</figure><p>' + escape(work.text) + '</p><a class="ads-text-link" href="../book-online/">Discuss your service →</a></article>';
@@ -174,8 +179,8 @@ function render(page) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/ads-pages.css?v=ads-footer-8">
-  <link rel="stylesheet" href="../assets/css/ads-global-header.css?v=ads-3">
+  <link rel="stylesheet" href="../assets/css/ads-pages.css?v=ads-hero-10">
+  <link rel="stylesheet" href="../assets/css/ads-global-header.css?v=ads-review-4">
   <link rel="stylesheet" href="../assets/css/ads-global-footer.css?v=ads-2">
   <link rel="stylesheet" href="../assets/css/ads-global-directories.css?v=ads-4">
   <link rel="stylesheet" href="../assets/css/ads-global-stats.css?v=ads-5">
@@ -197,7 +202,6 @@ function render(page) {
       <div class="ads-hero__image" aria-hidden="true">${img(page.hero, '', page.heroWidth, page.heroHeight, true)}</div>
       <div class="ads-container ads-hero__inner">
         <div class="ads-hero__content">
-          <p class="ads-eyebrow">${escape(page.eyebrow)}</p>
           <h1 id="hero-title">${escape(page.headline)}</h1>
           <p class="ads-hero__intro">${escape(page.intro)}</p>
           <div class="ads-review-proof" aria-label="Company-level customer review proof">
@@ -207,7 +211,6 @@ function render(page) {
           </div>
           <div class="ads-trust-row">
             <div class="ads-badges" aria-label="Company trust badges">${badges.map((n,i)=>img(a(n), badgeLabels[i], undefined, undefined, 'eager')).join('')}</div>
-            <div class="ads-payments"><span>We Accept All Cards</span><div>${payments.map((n,i)=>img(a('payment-'+n), paymentLabels[i], undefined, undefined, 'eager')).join('')}</div></div>
           </div>
           ${actions()}
         </div>

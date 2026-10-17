@@ -8,7 +8,9 @@ const expectedFooter = footerSource?.replace(/(src|href)="(?!https?:|tel:|mailto
 const homepage = fs.readFileSync('index.html', 'utf8');
 const headerSource = homepage.match(/<header class="cs-header"[\s\S]*?<\/header>/)?.[0];
 const expectedHeader = headerSource?.replace(/(src|href)="(?!https?:|tel:|mailto:|#)([^"]+)"/g, (_, attribute, value) => attribute + '="../' + value + '"');
-const reviewStrip = homepage.match(/<div class="cs-review-strip"[\s\S]*?<\/div>/)?.[0];
+const reviewStrip = homepage.match(/<div class="cs-review-strip"[\s\S]*?<\/div>/)?.[0]
+  ?.replace('Our Customers Rate Us ', '<span class="ads-review-desktop-copy">Our Customers Rate Us </span>')
+  .replace('Based On ', '<span class="ads-review-desktop-copy">Based On </span>');
 for (const page of pages) {
   const filename = page.slug + '/index.html';
   execFileSync(process.execPath, ['scripts/validate.mjs', filename], { stdio: 'pipe' });
@@ -24,6 +26,11 @@ for (const page of pages) {
     if (!fs.existsSync(local)) issues.push(filename + ': missing photo ' + src);
   }
   if (!html.includes(page.headline)) issues.push(filename + ': wrong service H1');
+  const hero = html.match(/<section class="ads-hero"[\s\S]*?<\/section>/)?.[0] || '';
+  if (hero.includes('ads-eyebrow') || /Local chimney (?:repair|sweeping|inspections) • Austin, TX/.test(hero)) issues.push(filename + ': removed hero location eyebrow reappeared');
+  if (hero.includes('ads-payments') || hero.includes('We Accept All Cards') || /payment-(?:visa|mastercard|american-express|discover)/.test(hero)) issues.push(filename + ': removed hero payment block reappeared');
+  const trustRow = hero.match(/<div class="ads-badges"[\s\S]*?<\/div>/)?.[0] || '';
+  if ([...trustRow.matchAll(/<img\b/g)].length !== 4) issues.push(filename + ': expected four hero trust badges');
   if (!/<section class="ads-hero"[\s\S]*?<\/section>\s*<section class="cs-stats"/.test(html)) issues.push(filename + ': statistics strip must follow hero directly');
   if ([...html.matchAll(/<section class="cs-stats"/g)].length !== 1) issues.push(filename + ': statistics strip must appear exactly once');
   if (html.includes('exit-offer.js') || html.includes('lead-offer.js')) issues.push(filename + ': website popout controller leaked into Ads');

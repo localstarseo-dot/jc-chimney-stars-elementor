@@ -378,5 +378,9 @@
   .cs-header .cs-container { width: min(calc(100% - 2rem), var(--cs-container)); }
   .cs-brand { width: 160px; flex-basis: 160px; }
   .cs-menu-toggle__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .cs-review-strip { flex-wrap: nowrap; white-space: nowrap; gap: clamp(8px, 2.5vw, 16px); padding: 0.55rem 0.5rem; min-height: 36px; font-size: clamp(10px, 3vw, 12px); }
+  .cs-review-strip > span { flex: 0 0 auto; }
+  .cs-review-strip__stars { font-size: clamp(14px, 4vw, 17px); letter-spacing: 0; }
+  .ads-review-desktop-copy { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 }
 @media (prefers-reduced-motion: reduce) { .cs-header *, .cs-header *::before, .cs-header *::after { transition: none !important; } }
